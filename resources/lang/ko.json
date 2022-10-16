@@ -1,0 +1,19 @@
+{
+    "Login": "로그인",
+    "E-Mail Address": "이메일 주소",
+    "Password": "암호",
+    "Remember Me": "날 기억해",
+    "Forgot Your Password?": "비밀번호를 잊어 버렸습니까?",
+    "Confirm Password": "비밀번호 확인",
+    "Please confirm your password before continuing.": "계속하기 전에 암호를 확인하십시오.",
+    "Reset Password": "암호를 재설정",
+    "Send Password Reset Link": "암호 재설정 링크 보내기",
+    "Register": "레지스터",
+    "Name": "이름",
+    "Verify Your Email Address": "이메일 주소를 확인",
+    "A fresh verification link has been sent to your email address.": "신선한 확인 링크가 이메일 주소로 전송되었습니다.",
+    "Before proceeding, please check your email for a verification link.": "진행하기 전에 확인 링크를 위해 이메일을 확인하십시오.",
+    "If you did not receive the email": "이메일을받지 못했다면",
+    "click here to request another": "다른 것을 요청하려면 여기를 클릭하십시오",
+    "Logout": "로그 아웃"
+}
