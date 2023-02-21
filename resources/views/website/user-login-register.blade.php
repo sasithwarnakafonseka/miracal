@@ -163,16 +163,21 @@
                                 <div class="col-sm-6">
                                     <input id="address4" type="text"
                                         class="form-group-input form-control @error('address4') is-invalid @enderror"
-                                        name="address4" value="{{ old('address4') }}" placeholder="{{ __('Code') }}"
-                                        required autocomplete="address4">
+                                        name="address4" value="{{ old('address4') }}"
+                                        placeholder="{{ __('Postcode') }}" required autocomplete="address4">
 
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-center sm:justify-end sm:mt-5 row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6" style="text-align: initial;">
+                                    <button type="button" class="sm:mt-0 button--simple btn btn-liq-main"
+                                        data-action="prev">
+                                        Back
+                                    </button>
                                     <button type="button" class="btn btn-liq-main" data-action="next">
                                         Continue
                                     </button>
+
                                 </div>
                                 <div class="col-sm-6">
                                     <p class="signup">
@@ -211,24 +216,28 @@
                             <input id="bank-account-number" type="text"
                                 class="form-control @error('bank-account-number') is-invalid @enderror"
                                 name="bank-account-number" value="{{ old('bank-account-number') }}"
-                                placeholder="{{ __('Bank Account Number') }}" required autocomplete="bank-account-number">
+                                placeholder="{{ __('Bank Account Number') }}" required
+                                autocomplete="bank-account-number">
 
                             <div class="row">
-                                <div class="col-sm-6">
-                                  <button type="button" class="mt-1 sm:mt-0 button--simple btn btn-liq-main" data-action="prev">
-                                    Back
-                                  </button>
+                                <div class="col-sm-6" style="text-align: end;">
+                                    <button type="button" class="sm:mt-0 button--simple btn btn-liq-main"
+                                        data-action="prev">
+                                        Back
+                                    </button>
                                 </div>
-                                <div class="col-sm-6">
-                                  <button class="btn btn-liq-main" type="submit">Sign Up</button>
-                                  <p class="signup">
-                                    Already have an account ?
-                                    <a href="#" onclick="toggleForm();">Sign In.</a>
-                                   </p>
+                                <div class="col-sm-6" style="text-align: start;">
+                                    <button class="btn btn-liq-main" type="submit">Sign Up</button>
                                 </div>
-                                
+
+                                <div class="col-sm-12">
+                                    <p class="signup">
+                                        Already have an account ?
+                                        <a href="#" onclick="toggleForm();">Sign In.</a>
+                                    </p>
+                                </div>
                             </div>
-                            
+
                         </section>
                         <!-- / End Step 3 -->
 
@@ -1064,8 +1073,8 @@
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
         /* ==========================================================================
-               Variables
-               ========================================================================== */
+                               Variables
+                               ========================================================================== */
 
         :root {
             /* --- Colors --- */
@@ -1113,57 +1122,57 @@
         }
 
         /* ==========================================================================
-               Base
-               ========================================================================== */
+                               Base
+                               ========================================================================== */
 
         /**
-             * Reset box-sizing on all elements
-             *
-             * `border-box` includes padding and border in the calculations for total
-             * width, height values. This is more predictable than the default
-             * `content-box`, which does the opposite.
-             *
-             * 1. Apply `inherit` to all elements (global selector)
-             * 2. Apply the same with a global selector for pseudo-elements
-             */
+                             * Reset box-sizing on all elements
+                             *
+                             * `border-box` includes padding and border in the calculations for total
+                             * width, height values. This is more predictable than the default
+                             * `content-box`, which does the opposite.
+                             *
+                             * 1. Apply `inherit` to all elements (global selector)
+                             * 2. Apply the same with a global selector for pseudo-elements
+                             */
 
 
         /**
-             * 1. Now add `border-box` to `html`, which will cascade down through all
-             *    elements, but leaves box-sizing easy to overwrite on a parent component
-             *
-             *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-             *
-             * 2. Set `html` font size to 62.5%, equal to 10px or 1rem
-             *
-             *    https://css-tricks.com/accessible-font-sizing-explained/
-             *
-             * 3. Set up full viewport height for sticky footer
-             * 4. Prevent font size adjustment after orientation change in iOS
-             */
+                             * 1. Now add `border-box` to `html`, which will cascade down through all
+                             *    elements, but leaves box-sizing easy to overwrite on a parent component
+                             *
+                             *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+                             *
+                             * 2. Set `html` font size to 62.5%, equal to 10px or 1rem
+                             *
+                             *    https://css-tricks.com/accessible-font-sizing-explained/
+                             *
+                             * 3. Set up full viewport height for sticky footer
+                             * 4. Prevent font size adjustment after orientation change in iOS
+                             */
 
 
         /* ==========================================================================
-               Accessibility
-               ========================================================================== */
+                               Accessibility
+                               ========================================================================== */
 
         /* Visibility
-               ========================================================================== */
+                               ========================================================================== */
 
         /**
-             * Visually hidden class
-             *
-             * Hides content to visual users, but leaves it accessible to screen reader
-             * users. The combination of these properties will ensure that the element
-             * is truly hidden and not getting smushed in the corner of the screen.
-             *
-             * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-             *
-             * 1. For long content, line feeds are not interpreted as spaces and small width
-             *    causes content to wrap 1 word per line:
-             *
-             *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-             */
+                             * Visually hidden class
+                             *
+                             * Hides content to visual users, but leaves it accessible to screen reader
+                             * users. The combination of these properties will ensure that the element
+                             * is truly hidden and not getting smushed in the corner of the screen.
+                             *
+                             * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+                             *
+                             * 1. For long content, line feeds are not interpreted as spaces and small width
+                             *    causes content to wrap 1 word per line:
+                             *
+                             *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+                             */
 
         .visually-hidden {
             border: 0;
@@ -1180,26 +1189,26 @@
         }
 
         /* ==========================================================================
-               CSS Flex
-               ========================================================================== */
+                               CSS Flex
+                               ========================================================================== */
 
         /* Flex Parent
-               ========================================================================== */
+                               ========================================================================== */
 
         /**
-             * These classes are named in the format `{breakpoint}:flex-{property}`
-             *
-             * Where `{breakpoint}` is one of sm, md, or lg
-             *
-             * Where `{property}` is one of:
-             *    row
-             *    row-reverse
-             *    column
-             *    column-reverse
-             *    wrap
-             *    wrap-reverse
-             *    wrap-nowrap
-             */
+                             * These classes are named in the format `{breakpoint}:flex-{property}`
+                             *
+                             * Where `{breakpoint}` is one of sm, md, or lg
+                             *
+                             * Where `{property}` is one of:
+                             *    row
+                             *    row-reverse
+                             *    column
+                             *    column-reverse
+                             *    wrap
+                             *    wrap-reverse
+                             *    wrap-nowrap
+                             */
 
         .flex-row {
             flex-direction: row;
@@ -1320,19 +1329,19 @@
         }
 
         /* Flex Children
-               ========================================================================== */
+                               ========================================================================== */
 
         /**
-             * These classes are named in the format `{breakpoint}:flex-{property}`
-             *
-             * Where `{breakpoint}` is one of sm, md, or lg
-             *
-             * Where `{property}` is one of:
-             *    1 - Allows the flex item the grow and shrink, 0% basis
-             *    auto - Allows the flex item to grow and shrink, auto basis
-             *    initial - Allows the flex item to shrink but not grow, auto basis
-             *    none - Prevents the flex item from growing or shrinking
-             */
+                             * These classes are named in the format `{breakpoint}:flex-{property}`
+                             *
+                             * Where `{breakpoint}` is one of sm, md, or lg
+                             *
+                             * Where `{property}` is one of:
+                             *    1 - Allows the flex item the grow and shrink, 0% basis
+                             *    auto - Allows the flex item to grow and shrink, auto basis
+                             *    initial - Allows the flex item to shrink but not grow, auto basis
+                             *    none - Prevents the flex item from growing or shrinking
+                             */
 
         .flex-1 {
             flex: 1 1 0%;
@@ -1405,19 +1414,19 @@
         }
 
         /* ==========================================================================
-               CSS Grid
-               ========================================================================== */
+                               CSS Grid
+                               ========================================================================== */
 
         /* Grid Children
-               ========================================================================== */
+                               ========================================================================== */
 
         /**
-             * These classes are named in the format `{breakpoint}:col-{count}`
-             *
-             * Where `{breakpoint}` is one of sm, md, or lg
-             *
-             * Where `{count}` is a number 1 - 6
-             */
+                             * These classes are named in the format `{breakpoint}:col-{count}`
+                             *
+                             * Where `{breakpoint}` is one of sm, md, or lg
+                             *
+                             * Where `{count}` is a number 1 - 6
+                             */
 
         .grid-col-1 {
             grid-template-columns: 1fr;
@@ -1522,7 +1531,7 @@
         }
 
         /* Errors
-               ========================================================================== */
+                               ========================================================================== */
 
         input[aria-invalid="true"],
         select[aria-invalid="true"],
@@ -1550,7 +1559,7 @@
         }
 
         /* Tabs
-               ========================================================================== */
+                               ========================================================================== */
 
         .progress-form__tabs {
             column-gap: 0;
