@@ -214,13 +214,14 @@ class HomeController extends Controller
     {
         $MainBanneritemSub = null;
         $productDetails = Products::find($Request->id);
-        // $productCatagoeries = DB::table('product_categories')->join('products_categories', 'products_categories.id', '=', 'product_categories.value')->where('product_categories.product_id', $Request->id)->get();
-        // $productTag = DB::table('product_tags')->join('products_tags', 'products_tags.id', '=', 'product_tags.value')->where('product_tags.product_id', $Request->id)->get();
+        $productCatagoeries = DB::table('product_categories')->join('products_categories', 'products_categories.id', '=', 'product_categories.value')->where('product_categories.product_id', $Request->id)->get();
+        $productTag = DB::table('product_tags')->join('products_tags', 'products_tags.id', '=', 'product_tags.value')->where('product_tags.product_id', $Request->id)->get();
 
-        // $productImage = ProductImage::where('product_id', $Request->id)->get();
-        // $realtive = HomeController::getRelatedProducts($Request->id);
+        $productImage = ProductImage::where('product_id', $Request->id)->get();
+        $realtive = HomeController::getRelatedProducts($Request->id);
 
-        return view('website.shop.single-product', ['productImage' => [], 'productTag' => [], 'productCatagoeries' => [], 'productDetails' => $productDetails, 'realtive' => [], 'MainBanneritemSub' => $MainBanneritemSub]);
+        $realtive = HomeController::getRelatedProducts($Request->id);
+        return view('website.shop.single-product', ['productImage' => $productImage, 'productTag' => $productTag, 'productCatagoeries' => $productCatagoeries, 'productDetails' => $productDetails, 'realtive' => $realtive, 'MainBanneritemSub' => $MainBanneritemSub]);
     }
 
     public function getRelatedProducts($id)
