@@ -2,95 +2,96 @@
 @section('title')
     {{ $productDetails->name }}
 @endsection
-<style>
-    /* product page  */
 
-    .content-carousel {
-        width: 500px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .owl-carousel {
-        width: calc(100% - 75px);
-    }
-
-    .owl-carousel div {
-        width: 100%;
-    }
-
-    .owl-carousel .owl-controls .owl-dot {
-        background-size: cover;
-        margin-top: 10px;
-    }
-
-    .owl-carousel .owl-dots {
-        position: absolute;
-        top: 0;
-        left: -75px;
-        width: 70px;
-        height: 100%;
-    }
-
-    .owl-carousel .owl-nav button.owl-next,
-    .owl-carousel .owl-nav button.owl-prev,
-    .owl-carousel button.owl-dot {
-        width: 100px;
-    }
-
-    .owl-carousel .owl-stage-outer {
-        margin-left: 40px;
-    }
-
-    .owl-carousel .owl-dot {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .rate {
-        float: left;
-        height: 46px;
-        /* padding: 0 10px; */
-    }
-
-    .rate:not(:checked)>input {
-        position: absolute;
-        top: -9999px;
-    }
-
-    .rate:not(:checked)>label {
-        float: right;
-        width: 1em;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-        font-size: 30px;
-        color: #ccc;
-    }
-
-    .rate:not(:checked)>label:before {
-        content: '★ ';
-    }
-
-    .rate>input:checked~label {
-        color: #ffc700;
-    }
-
-    .rate:not(:checked)>label:hover,
-    .rate:not(:checked)>label:hover~label {
-        color: #deb217;
-    }
-
-    .rate>input:checked+label:hover,
-    .rate>input:checked+label:hover~label,
-    .rate>input:checked~label:hover,
-    .rate>input:checked~label:hover~label,
-    .rate>label:hover~input:checked~label {
-        color: #c59b08;
-    }
-</style>
 @section('content')
+    <style>
+        /* product page  */
+
+        .content-carousel {
+            width: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .owl-carousel {
+            width: calc(100% - 75px);
+        }
+
+        .owl-carousel div {
+            width: 100%;
+        }
+
+        .owl-carousel .owl-controls .owl-dot {
+            background-size: cover;
+            margin-top: 10px;
+        }
+
+        .owl-carousel .owl-dots {
+            position: absolute;
+            top: 0;
+            left: -75px;
+            width: 70px;
+            height: 100%;
+        }
+
+        .owl-carousel .owl-nav button.owl-next,
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel button.owl-dot {
+            width: 100px;
+        }
+
+        .owl-carousel .owl-stage-outer {
+            margin-left: 40px;
+        }
+
+        .owl-carousel .owl-dot {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .rate {
+            float: left;
+            height: 46px;
+            /* padding: 0 10px; */
+        }
+
+        .rate:not(:checked)>input {
+            position: absolute;
+            top: -9999px;
+        }
+
+        .rate:not(:checked)>label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+
+        .rate:not(:checked)>label:before {
+            content: '★ ';
+        }
+
+        .rate>input:checked~label {
+            color: #ffc700;
+        }
+
+        .rate:not(:checked)>label:hover,
+        .rate:not(:checked)>label:hover~label {
+            color: #deb217;
+        }
+
+        .rate>input:checked+label:hover,
+        .rate>input:checked+label:hover~label,
+        .rate>input:checked~label:hover,
+        .rate>input:checked~label:hover~label,
+        .rate>label:hover~input:checked~label {
+            color: #c59b08;
+        }
+    </style>
     <main role="main">
         <div class="container-fluid single-product-view">
             <div class="row single-shop-row">
@@ -128,7 +129,13 @@
                                                                                 background-size: cover;">
                                     </main>
                                 @else
-                                    <main class="primary"><img src="http://placekitten.com/420/600"> </main>
+                                    @if ($productDetails->product_thumbnail_image)
+                                        <main class="primary"
+                                            style="background-image: url('/storage/{{ $productDetails->product_thumbnail_image }}');background-repeat: no-repeat;
+                                                                        background-size: cover;">
+                                        </main>
+                                    @else
+                                    @endif
                                 @endif
 
 
@@ -155,9 +162,10 @@
                             }
                             $avg_rate = $count_rate / $countRate;
                         @endphp
-                        @if ($productDetails->g_sale_price_date != null &&
-                            $toDay <= $productDetails->g_sale_price_date &&
-                            $timeNow <= $productDetails->g_sale_price_time)
+                        @if (
+                            $productDetails->g_sale_price_date != null &&
+                                $toDay <= $productDetails->g_sale_price_date &&
+                                $timeNow <= $productDetails->g_sale_price_time)
                             <h6 class="single-product-price" id="price">${{ $productDetails->g_sale_price }}</h6>
                         @else
                             <h6 class="single-product-price" id="price">${{ $productDetails->g_regular_price }}</h6>
@@ -263,8 +271,8 @@
 
                             <div class="col-6">
                                 @if ($productDetails->Inventory_Stock_status == 1 || $sale_items > $Sold_Products)
-                                    <a id="order_link" href="/add-to-cart?id={{$productDetails->id}}&quantity=1"> <button
-                                            class="btn btn-primary btn-miracle-blog"
+                                    <a id="order_link" href="/add-to-cart?id={{ $productDetails->id }}&quantity=1">
+                                        <button class="btn btn-primary btn-miracle-blog"
                                             style="margin-top: 0px;margin-bottom: 30px;" type="button">Add
                                             to Cart</button></a>
                                     <input type="text" value="{{ $productDetails->id }}" class="product-id" hidden>
@@ -308,7 +316,7 @@
             <div class="container-fluid mb-5 bottom-content-single-product-view">
                 {!! $productDetails->description_product !!}
             </div>
-            
+
             @if ($realtive != null)
                 <div class="row">
                     <div style="color:#AE7529" class="col-md-12 text-left">
@@ -742,7 +750,7 @@
 
         .primary {
             width: 100%;
-            height: 450px;
+            height: 375px;
         }
 
         .thumbnail:hover .thumbnail-image,
