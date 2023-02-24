@@ -225,11 +225,6 @@
                     </div>
 
                     <div class="row col-12">
-                        <div class="single-product-desc">
-                            <p class="pl-3 single-product-desc">
-                                {!! $productDetails->descriptions !!}
-                            </p>
-                        </div>
                         <div class="row pl-3">
                             <div class="col-4">
                                 @php
@@ -270,7 +265,7 @@
                             </div>
 
                             <div class="col-6">
-                                @if ($productDetails->Inventory_Stock_status == 1 || $sale_items > $Sold_Products)
+                                @if ($productDetails->description_productInventory_Stock_status == 1 || $sale_items > $Sold_Products)
                                     <a id="order_link" href="/add-to-cart?id={{ $productDetails->id }}&quantity=1">
                                         <button class="btn btn-primary btn-miracle-blog"
                                             style="margin-top: 0px;margin-bottom: 30px;" type="button">Add
@@ -313,8 +308,8 @@
                 </div>
             </div>
 
-            <div class="container-fluid mb-5 bottom-content-single-product-view">
-                {!! $productDetails->description_product !!}
+            <div class="container-fluid mt-5 mb-5 bottom-content-single-product-view">
+                {!! $productDetails->descriptions !!}
             </div>
 
             @if ($realtive != null)
