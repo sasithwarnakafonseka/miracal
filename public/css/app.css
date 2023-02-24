@@ -1892,8 +1892,8 @@ border-radius: 0;
 }
 
 .miracle-news-events-card-img img {
-    width: 100%;
-    height: 310px;
+    width: -webkit-fill-available;
+    height: auto;
     display: block;
 }
 

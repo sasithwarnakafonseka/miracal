@@ -305,7 +305,7 @@
                                                                         class="text-uppercase font-size-sm font-weight-bold">
                                                                     </legend>
 
-                                                                    <div class="form-group">
+                                                                    {{-- <div class="form-group">
                                                                         <label>Tax Status</label>
                                                                         <input type="number" id="Sale_status"
                                                                             class="form-control" name="Sale_status">
@@ -315,7 +315,7 @@
                                                                         <label>Tax Class</label>
                                                                         <input type="text" id="Sale_class"
                                                                             class="form-control" name="Sale_class">
-                                                                    </div>
+                                                                    </div> --}}
                                                                     <div class="form-group">
                                                                         <label>Product Descriptions </label>
                                                                         <textarea id="description_product" class="summernote" name="description_product"></textarea>
