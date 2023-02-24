@@ -25,28 +25,31 @@
                         <h6 class="card-title">Edit My Account</h6>
                     </div>
                     <div class="card-body py-0">
-                        <form method="POST" action="{{route('edit.user')}}" class="delete_product">
+                        <form method="POST" action="{{ route('edit.user') }}" class="delete_product">
                             {{ csrf_field() }}
                             <div class="form-group row">
 
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label>User Name</label>
-                                        <input type="text" class="form-control " name="uname" value="{{$user ?? ''->name}}">
+                                        <input type="text" class="form-control " name="uname"
+                                            value="{{ $user->name }}">
                                     </div>
                                 </div>
 
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label>User Email</label>
-                                        <input type="text" class="form-control " name="email" value="{{$user ?? ''->email}}">
+                                        <input type="text" class="form-control " name="email"
+                                            value="{{ $user->email }}">
                                     </div>
                                 </div>
 
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label>Contact Number</label>
-                                        <input type="text" class="form-control " name="Contact_Number" value="{{$user ?? ''->phone}}">
+                                        <input type="text" class="form-control " name="Contact_Number"
+                                            value="{{ $user->phone }}">
                                     </div>
                                 </div>
 
@@ -75,7 +78,7 @@
                     </div>
 
                     <div class="card-body py-0">
-                        <form method="POST" action="{{route('edit.user.pasword')}}" class="delete_product">
+                        <form method="POST" action="{{ route('edit.user.pasword') }}" class="delete_product">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <div class="form-group">
@@ -110,6 +113,5 @@
             .PageLocation {
                 display: contents;
             }
-
         </style>
     @endsection
