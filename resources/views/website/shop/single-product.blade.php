@@ -275,7 +275,8 @@
                             </div>
                             <div class="col-12 mt-3"
                                 style="border-bottom: 1px solid #AE7529;padding-left: 0px;margin-left: 15px;">
-                                <h6 class="static-title-single-product-pg"> miracle Code : </h6>
+                                <h6 class="static-title-single-product-pg"> Miracle Code : MC-{{ $productDetails->id }}
+                                </h6>
                             </div>
                             <div class="col-12 mt-3"
                                 style="border-bottom: 1px solid #AE7529;padding-left: 0px;margin-left: 15px;">
