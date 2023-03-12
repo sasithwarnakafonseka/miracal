@@ -82,7 +82,8 @@
         <header class="mb-auto">
             <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation" id="navbar">
                 <div class="container">
-                  <a class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img class="site-logo" alt="Miracle" src="/global_assets/images/logo-menu.png"></a>
+                    <a class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img class="site-logo"
+                            alt="Miracle" src="/global_assets/images/logo-menu.png"></a>
                     <!-- Toggler -->
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -114,328 +115,139 @@
                     </div>
                 </span> --}}
 
-            
-                <div class="mx-auto order-0">
-                    <ul style="" class="navbar-nav justify-content-center">
-                      
-                       
-                        <li class="nav-item homePage">
-                            <a href="{{ route('/') }}" class="nav-link">HOME</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarLandings" data-toggle="dropdown"
-                                href="#" aria-haspopup="true" aria-expanded="false">
-                                SHOP
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
-                                <hr
-                                    style="border-top: 4px #006738 solid; padding: 0px; margin-top: -1px; margin-bottom: 0px; width: 13.4%; margin-left: 208px">
-                                <div class="tab">
-                                    <button onclick="MoveSite('/shop?latest=true');" class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Wine')" id="defaultOpen">New</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Brands')">Brands</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Makeup')">Makeup</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Skin')">Skin Care</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Hair')">Hair Care</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Fragrance')">Fragrance</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Bath & Body')">Bath & Body</button>
-                                    <button class="tablinks"
-                                        onmouseover="openPortfolioTab(event, 'Men')">Men</button>
-                                </div>
 
-                                <div id="Wine" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>
-                                                    <h6>Italy</h6>
-                                                </li>
-                                                <li>Veneto</li>
-                                                <li>Tuscany</li>
-                                                <li>Piedmont</li>
-                                                <li>Emilia-Romagna</li>
-                                                <li>Lombardy </li>
-                                                <li>Umbria</li>
-                                                <li>Abruzzo</li>
-                                                <li>Trentino Alto-Adige</li>
-                                                <li>Friuli-Venezia Giulia</li>
-                                                <li>Marche</li>
-                                                <li>Puglia</li>
-                                                <li>Sicily</li>
-                                                <li>Sardinia </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>
-                                                    <h6>France</h6>
-                                                </li>
-                                                <li> Champagne </li>
-                                                <li>Loire Valley</li>
-                                                <li>Alsace </li>
-                                                <li>Burgundy </li>
-                                                <li>Beaujolais</li>
-                                                <li>Bordeaux</li>
-                                                <li>Rhone Valley</li>
-                                                <li>Provence</li>
-                                                <li>Languedoc Roussillon</li>
-                                                <li>Corsica</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>
-                                                    <h6>Spain</h6>
-                                                </li>
-                                                <li>Rioja</li>
-                                                <li> Penedès</li>
-                                                <li> Priorat</li>
-                                                <li> Ribera del Duero</li>
-                                                <li> Valencia</li>
-                                                <li> Navarra</li>
-                                                <li> La Mancha</li>
-                                                <li> Rueda</li>
-                                                <li> Galicia </li>
-                                                <li> Bierzo</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>
-                                                    <h6>Other Countries </h6>
-                                                </li>
-                                                <li>USA</li>
-                                                <li> Australia</li>
-                                                <li> New Zealand </li>
-                                                <li> Argentina</li>
-                                                <li> China </li>
-                                                <li> South Africa </li>
-                                                <li> Chile</li>
-                                                <li> Germany </li>
-                                                <li> Austria</li>
-                                                <li> Switzerland</li>
-                                                <li> India</li>
-                                                <li> UK</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="Bubbles" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Vermouth</li>
-                                                <li> Port wines </li>
-                                                <li> Sherry </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div id="Spirits" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Champagnes </li>
-                                                <li> Franciacorta</li>
-                                                <li> Prosecco</li>
-                                                <li> Cava</li>
-                                                <li> Crémant</li>
-                                                <li> Sekt</li>
-                                                <li> Other sparkling wines </li>
-
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div id="Beers/Ciders/Mead" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Vodka </li>
-                                                <li> Gin </li>
-                                                <li> Whisk(e)y & Whisky</li>
-                                                <li> Rum </li>
-                                                <li> Tequila </li>
-                                                <li> Brandy </li>
-                                                <li> Cognac</li>
-                                                <li> Armanac</li>
-                                                <li> Calvados </li>
-                                                <li> Pisco0</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div id="Liqueurs" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Larger</li>
-                                                <li> Ales</li>
-                                                <li> Cider</li>
-                                                <li> Mead</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Sake" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Sake</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div id="Non-Alcoholic" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li> Syrup </li>
-                                                <li> Puree </li>
-                                                <li> Water </li>
-                                                <li> Non Alcoholic Beer </li>
-                                                <li> Flavoured Beer </li>
-                                                <li> Flavoured & Vitamin Water </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Accessories" class="tabcontent">
-                                    <div class="row mt-3">
-                                        <div class="col-3">
-                                            <ul>
-                                                <li>Wine tools & accessories</li>
-                                                <li> Bar tools & accessories</li>
-                                                <li> Cocktail tool & accessories</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="nav-item aboutPage" style="width:134px">
-                            <a href="{{ route('/about') }}" class="nav-link">ABOUT US</a>
-                        </li>
-                        <li class="nav-item aboutPage" style="width:145px">
-                            <a href="{{ route('help_faq') }}" class="nav-link">Help & Contact</a>
-                        </li>
-                        {{-- User icon and Cart icon end --}}
+                    <div class="mx-auto order-0">
+                        <ul style="" class="navbar-nav justify-content-center">
 
 
-                        {{-- User icon and Cart icon end --}}
-
-                    </ul>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav ml-auto mr-auto">
-                        <li class="nav-item">
-                            <a onclick="searchBox();" class="nav-link navbar-link-2 waves-effect">
-                                <i class="fas fa-fw fa-search pl-0"></i>
-                            </a>
-                        </li>
-                        @php
-                            $totalItemNav = 0;
-                            $totel_itemsItemNav = 0;
-                        @endphp
-                        @if (session('cart'))
-
-                            @foreach (session('cart') as $id => $details)
-
-                                @php
-                                    $totalItemNav += $details['price'] * $details['quantity'];
-                                    $totel_itemsItemNav += $details['quantity'];
-                                @endphp
-                            @endforeach
-                        @endif
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a data-toggle="dropdown cart-dropdown"
-                                    style="padding-top: 52px; padding-bottom:52px;"><span
-                                        class="badge badge-pill badge-danger menu-cart-qty-batch">{{ $totel_itemsItemNav }}</span>
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <li class="nav-item homePage">
+                                <a href="{{ route('/') }}" class="nav-link">HOME</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" id 
                                 </a>
-                                </button>
-                                <div class="dropdown-menu cart-dropdown">
-                                    <div class="row total-header-section">
-                                        <div class="col-lg-6 col-sm-6 col-6">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i><span
-                                                class="badge badge-pill badge-danger">{{ $totel_itemsItemNav }}</span>
-                                        </div>
-                                        <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
-                                            <p>Total: <span class="text-info">${{ $totalItemNav }}</span>
-                                            </p>
-                                        </div>
+                                <div class="dropdown-menu" aria-labelledby="navbarLandings">
+                                    <div class="tab">
+                                        <a href="/shop?category=10"> <button class="tablinks" id="defaultOpen">Skin
+                                                Care</button></a>
+                                        <a href="/shop?category=11"><button class="tablinks"
+                                                onmouseover="openPortfolioTab(event, 'Hair-Care')">Hair
+                                                Care</button></a>
+                                        <a href="/shop?category=12"><button class="tablinks"
+                                                onmouseover="openPortfolioTab(event, 'Pharmaceutical')">Pharmaceutical</button></a>
                                     </div>
-                                    @if (session('cart'))
-
-                                        @foreach (session('cart') as $id => $details)
-
-                                            <div class="row cart-detail">
-                                                <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
-                                                    <img src="/storage/{{ $details['image'] }}">
-                                                </div>
-                                                <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-                                                    <div class="row">
-                                                        <div class="col-8">
-                                                            <p>{{ $details['name'] }}</p>
-                                                            <span class="price text-info">
-                                                                ${{ $details['price'] }}</span> <span
-                                                                class="count">
-                                                                Quantity:{{ $details['quantity'] }}</span>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <button class="btn btn-liq-main remove-from-cart"
-                                                                product_id="{{ $id }}" type="button"
-                                                                id="button-addon2"><i class="fa fa-trash"
-                                                                    aria-hidden="true"></i></button>
-                                                        </div>
-                                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item aboutPage" style="width:134px">
+                                <a href="{{ route('/about') }}" class="nav-link">ABOUT US</a>
+                            </li>
+                            <li class="nav-item aboutPage" style="width:145px">
+                                <a href="{{ route('help_faq') }}" class="nav-link">Help & Contact</a>
+                            </li>
+                            {{-- User icon and Cart icon end --}}
 
 
-                                                </div>
+                            {{-- User icon and Cart icon end --}}
+
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav ml-auto mr-auto">
+                            <li class="nav-item">
+                                <a onclick="searchBox();" class="nav-link navbar-link-2 waves-effect">
+                                    <i class="fas fa-fw fa-search pl-0"></i>
+                                </a>
+                            </li>
+                            @php
+                                $totalItemNav = 0;
+                                $totel_itemsItemNav = 0;
+                            @endphp
+                            @if (session('cart'))
+
+                                @foreach (session('cart') as $id => $details)
+                                    @php
+                                        $totalItemNav += $details['price'] * $details['quantity'];
+                                        $totel_itemsItemNav += $details['quantity'];
+                                    @endphp
+                                @endforeach
+                            @endif
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a data-toggle="dropdown cart-dropdown"
+                                        style="padding-top: 52px; padding-bottom:52px;"><span
+                                            class="badge badge-pill badge-danger menu-cart-qty-batch">{{ $totel_itemsItemNav }}</span>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </a>
+                                    </button>
+                                    <div class="dropdown-menu cart-dropdown">
+                                        <div class="row total-header-section">
+                                            <div class="col-lg-6 col-sm-6 col-6">
+                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i><span
+                                                    class="badge badge-pill badge-danger">{{ $totel_itemsItemNav }}</span>
                                             </div>
-                                        @endforeach
+                                            <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                                <p>Total: <span class="text-info">${{ $totalItemNav }}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        @if (session('cart'))
 
-                                    @endif
+                                            @foreach (session('cart') as $id => $details)
+                                                <div class="row cart-detail">
+                                                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                                        <img src="/storage/{{ $details['image'] }}">
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                                        <div class="row">
+                                                            <div class="col-8">
+                                                                <p>{{ $details['name'] }}</p>
+                                                                <span class="price text-info">
+                                                                    ${{ $details['price'] }}</span> <span
+                                                                    class="count">
+                                                                    Quantity:{{ $details['quantity'] }}</span>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <button class="btn btn-liq-main remove-from-cart"
+                                                                    product_id="{{ $id }}" type="button"
+                                                                    id="button-addon2"><i class="fa fa-trash"
+                                                                        aria-hidden="true"></i></button>
+                                                            </div>
+                                                        </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                                            <a class="cart-button-dropdwn" @if ($totalItemNav > 0) href="/shop/checkout" @else href="javascript:void(0)" @endif><button
-                                                    class="btn btn-primary btn-block">Checkout</button></a>
+
+                                                    </div>
+                                                </div>
+                                            @endforeach
+
+                                        @endif
+
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                                                <a class="cart-button-dropdwn"
+                                                    @if ($totalItemNav > 0) href="/shop/checkout" @else href="javascript:void(0)" @endif><button
+                                                        class="btn btn-primary btn-block">Checkout</button></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        @if (Auth::check())
-                            <li class="nav-item">
-                                <a href="/my-account" class="nav-link navbar-link-2 waves-effect">
-                                    <i class="fas fa-fw fa-user pl-0"></i>
-                                </a>
                             </li>
-                        @else
-                            <li class="nav-item">
-                                <a href="/my-account" class="nav-link navbar-link-2 waves-effect">
-                                    <button type="button" class="btn btn-secondary btn-rounded">Login | Register</button>
-                                </a>
-                            </li>
-                        @endif
-                        
-                    </ul>
-                </div>
+                            @if (Auth::check())
+                                <li class="nav-item">
+                                    <a href="/my-account" class="nav-link navbar-link-2 waves-effect">
+                                        <i class="fas fa-fw fa-user pl-0"></i>
+                                    </a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a href="/my-account" class="nav-link navbar-link-2 waves-effect">
+                                        <button type="button" class="btn btn-secondary btn-rounded">Login |
+                                            Register</button>
+                                    </a>
+                                </li>
+                            @endif
+
+                        </ul>
+                    </div>
             </nav>
 
             {{-- Mobile and tab menu start --}}
@@ -743,8 +555,7 @@
         @if ($MainBanneritemSub != null)
             <section class="banner" id="section_slag">
                 <div class="img-bg">
-                    <div class="img-src"
-                        style="background-image:url('/storage/{{ $MainBanneritemSub->img }}')">
+                    <div class="img-src" style="background-image:url('/storage/{{ $MainBanneritemSub->img }}')">
                     </div>
                     <div class="img-src img-blurred"
                         style="background-image:url('/storage/{{ $MainBanneritemSub->img }}')">
@@ -761,17 +572,14 @@
                     </div>
                 </div>
             </section>
-
         @endif
 
         @if (session('success'))
-
             <div class="alert alert-success">
 
                 {{ session('success') }}
 
             </div>
-
         @endif
 
         @yield('content')
@@ -785,8 +593,11 @@
                         <div class="col-md-3 col-sm-12">
                             <div class="footer-widget">
                                 <div class="widget-about">
-                                    
-                                    <h4 class="footer-widget-title liq-main-color"><a class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img class="site-logo" alt="Miracle" style="margin-bottom: 0px;" src="/global_assets/images/logo-menu.png"></a></h4>
+
+                                    <h4 class="footer-widget-title liq-main-color"><a
+                                            class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img
+                                                class="site-logo" alt="Miracle" style="margin-bottom: 0px;"
+                                                src="/global_assets/images/logo-menu.png"></a></h4>
                                     <h4 style="text-align: initial;">Miracle Beauty Costmatics</h4>
                                     <p>We are trend setters and helping the beverage industry reaches its next
                                         level.
@@ -1395,7 +1206,7 @@
 
 
     $(document).ready(function() {
-        openPortfolioTab(event, 'Wine');
+        openPortfolioTab(event, 'Skin-Care');
     });
 
     $('#navbarLandings').mouseover(function() {
@@ -1408,8 +1219,8 @@
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
-        document.getElementById('Wine').style.display = "block";
-        $('#Wine').addClass( "active" );
+        document.getElementById('Skin-Care').style.display = "block";
+        $('#Skin-Care').addClass("active");
     });
 
     //Code by ARiyou2000

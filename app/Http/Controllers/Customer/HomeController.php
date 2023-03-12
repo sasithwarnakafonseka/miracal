@@ -417,7 +417,11 @@ class HomeController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
         if ($validator->fails()) {
-            session()->flash('success', 'Error , Check Form Details !');
+            $error = $validator->errors()->first();
+            if ($error) {
+                session()->flash('success', 'Error , ' . $error);
+            }
+
         }
 
         $validat_val = $validator->validate();
@@ -440,7 +444,7 @@ class HomeController extends Controller
         //type = Admin
         $User->save();
 
-        // dd($User);
+        dd($User);
         // if(){
 
         // }else{

@@ -503,8 +503,8 @@ div.dropdown-multicol2>div.dropdown-col {
 }
 
 .dropdown-menu {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    /* padding-left: 1.75rem;
+    padding-right: 1.75rem; */
 }
 
 .dropdown-item {
@@ -857,7 +857,8 @@ div.dropdown-multicol2>div.dropdown-col {
     }
 
     .navbar-nav .dropdown>.dropdown-menu {
-        left: 168%;
+        left: 50%;
+        background-color: #F8EFEC;
         transform: translate3d(-50%, 10px, 0);
     }
 
@@ -1174,8 +1175,7 @@ nav .icons li a {
     float: left;
     /* border: 1px solid #ccc; */
     background-color: #F8EFEC;
-    width: 30%;
-    height: 430px;
+    width: 100%;
 }
 
 .h6,
@@ -5075,7 +5075,7 @@ button.slick-next.slick-arrow {
     padding: 10px;
     position: relative;
     /* width: 800px; */
-    height: 450px;
+    height: 650px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;

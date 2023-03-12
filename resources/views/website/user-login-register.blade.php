@@ -51,198 +51,125 @@
                         action="{{ route('login-register.register') }}" lang="en" novalidate>
                         @csrf
                         <h2>Create an account</h2>
-                        <!-- Step Navigation -->
-                        <div class="d-flex align-items-start mb-3 sm:mb-5 progress-form__tabs" role="tablist">
-                            <button id="progress-form__tab-1" class="flex-1 px-0 pt-2 progress-form__tabs-item"
-                                type="button" role="tab" aria-controls="progress-form__panel-1" aria-selected="true">
-                                <span class="d-block step" aria-hidden="true">Step 1 <span class="sm:d-none">of
-                                        3</span></span>
-                                Personal details
-                            </button>
-                            <button id="progress-form__tab-2" class="flex-1 px-0 pt-2 progress-form__tabs-item"
-                                type="button" role="tab" aria-controls="progress-form__panel-2" aria-selected="false"
-                                tabindex="-1" aria-disabled="true">
-                                <span class="d-block step" aria-hidden="true">Step 2 <span class="sm:d-none">of
-                                        3</span></span>
-                                Residential details
-                            </button>
-                            <button id="progress-form__tab-3" class="flex-1 px-0 pt-2 progress-form__tabs-item"
-                                type="button" role="tab" aria-controls="progress-form__panel-3" aria-selected="false"
-                                tabindex="-1" aria-disabled="true">
-                                <span class="d-block step" aria-hidden="true">Step 3 <span class="sm:d-none">of
-                                        3</span></span>
-                                Bank info
-                            </button>
+                        <h6 class="text-left">Personal details</h6>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="first_name" type="text"
+                                    class="form-group-input form-control @error('first_name') is-invalid @enderror"
+                                    name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('First Name') }}"
+                                    required autocomplete="first_name" autofocus>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="last_name" type="text"
+                                    class="form-group-input form-control @error('last_name') is-invalid @enderror"
+                                    name="last_name" value="{{ old('last_name') }}" placeholder="{{ __('Last Name') }}"
+                                    required autocomplete="last_name" autofocus>
+                            </div>
                         </div>
-                        <!-- / End Step Navigation -->
 
-                        <!-- Step 1 -->
-                        <section id="progress-form__panel-1" role="tabpanel" aria-labelledby="progress-form__tab-1"
-                            tabindex="0">
-                            <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input id="first_name" type="text"
-                                        class="form-group-input form-control @error('first_name') is-invalid @enderror"
-                                        name="first_name" value="{{ old('first_name') }}"
-                                        placeholder="{{ __('First Name') }}" required autocomplete="first_name" autofocus>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input id="last_name" type="text"
-                                        class="form-group-input form-control @error('last_name') is-invalid @enderror"
-                                        name="last_name" value="{{ old('last_name') }}"
-                                        placeholder="{{ __('Last Name') }}" required autocomplete="last_name" autofocus>
-                                </div>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                            name="email" value="{{ old('email') }}" placeholder="{{ __('E-mail') }}" required
+                            autocomplete="email">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="phone" type="phone"
+                                    class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                    value="{{ old('phone') }}" placeholder="{{ __('Contact Number') }}" required
+                                    autocomplete="phone">
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror"
+                                    name="dob" value="{{ old('dob') }}" placeholder="{{ __('Date of Birth') }}"
+                                    required autocomplete="dob">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="password" type="password"
+                                    class="form-group-input form-control @error('password') is-invalid @enderror"
+                                    placeholder="{{ __('Password') }}" name="password" required
+                                    autocomplete="new-password">
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="password-confirm" type="password" class="form-group-input form-control"
+                                    name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required
+                                    autocomplete="new-password">
+                            </div>
+                        </div>
+                        <h6 class="text-left">Residential details</h6>
+                        <input id="address" type="text" class="form-control @error('address') is-invalid @enderror"
+                            name="address" value="{{ old('address') }}" placeholder="{{ __('Address') }}" required
+                            autocomplete="address">
+                        <input id="address2" type="text" class="form-control @error('address2') is-invalid @enderror"
+                            name="address2" value="{{ old('address2') }}" placeholder="{{ __('City/State') }}" required
+                            autocomplete="address2">
+
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="address3" type="text"
+                                    class="form-group-input form-control @error('address3') is-invalid @enderror"
+                                    name="address3" value="{{ old('address3') }}" placeholder="{{ __('Contry') }}"
+                                    required autocomplete="address3">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="address4" type="text"
+                                    class="form-group-input form-control @error('address4') is-invalid @enderror"
+                                    name="address4" value="{{ old('address4') }}" placeholder="{{ __('Postcode') }}"
+                                    required autocomplete="address4">
+
+                            </div>
+                        </div>
+                        <h6 class="text-left">Bank info</h6>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="bank-name" type="text"
+                                    class="form-group-input form-control @error('bank-name') is-invalid @enderror"
+                                    name="bank-name" value="{{ old('bank-name') }}" placeholder="{{ __('Bank Name') }}"
+                                    required autocomplete="bank-name">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="bank-code" type="text"
+                                    class="form-group-input form-control @error('bank-code') is-invalid @enderror"
+                                    name="bank-code" value="{{ old('bank-code') }}" placeholder="{{ __('Code') }}"
+                                    required autocomplete="bank-code">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input id="bank-account-name" type="text"
+                                    class="form-control @error('bank-account-name') is-invalid @enderror"
+                                    name="bank-account-name" value="{{ old('bank-account-name') }}"
+                                    placeholder="{{ __('Bank Account Name') }}" required
+                                    autocomplete="bank-account-name">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="bank-account-number" type="text"
+                                    class="form-control @error('bank-account-number') is-invalid @enderror"
+                                    name="bank-account-number" value="{{ old('bank-account-number') }}"
+                                    placeholder="{{ __('Bank Account Number') }}" required
+                                    autocomplete="bank-account-number">
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6" style="text-align: start;">
+                                <button class="btn btn-liq-main" type="submit">Sign Up</button>
                             </div>
 
-                            <input id="email" type="email"
-                                class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ old('email') }}" placeholder="{{ __('E-mail') }}" required
-                                autocomplete="email">
-
-                            <input id="phone" type="phone"
-                                class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                value="{{ old('phone') }}" placeholder="{{ __('Contact Number') }}" required
-                                autocomplete="phone">
-
-                            <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror"
-                                name="dob" value="{{ old('dob') }}" placeholder="{{ __('Date of Birth') }}"
-                                required autocomplete="dob">
-
-
-                            <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input id="password" type="password"
-                                        class="form-group-input form-control @error('password') is-invalid @enderror"
-                                        placeholder="{{ __('Password') }}" name="password" required
-                                        autocomplete="new-password">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input id="password-confirm" type="password" class="form-group-input form-control"
-                                        name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required
-                                        autocomplete="new-password">
-                                </div>
+                            <div class="col-sm-12">
+                                <p class="signup">
+                                    Already have an account ?
+                                    <a href="#" onclick="toggleForm();">Sign In.</a>
+                                </p>
                             </div>
-
-                            <div class="d-flex align-items-center justify-center sm:justify-end sm:mt-5 row">
-                                <div class="col-sm-6">
-                                    <button type="button" class="btn btn-liq-main" data-action="next">
-                                        Continue
-                                    </button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="signup">
-                                        Already have an account ?
-                                        <a href="#" onclick="toggleForm();">Sign In.</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- / End Step 1 -->
-
-                        <!-- Step 2 -->
-                        <section id="progress-form__panel-2" role="tabpanel" aria-labelledby="progress-form__tab-2"
-                            tabindex="0" hidden>
-
-                            <input id="address" type="text"
-                                class="form-control @error('address') is-invalid @enderror" name="address"
-                                value="{{ old('address') }}" placeholder="{{ __('Address') }}" required
-                                autocomplete="address">
-                            <input id="address2" type="text"
-                                class="form-control @error('address2') is-invalid @enderror" name="address2"
-                                value="{{ old('address2') }}" placeholder="{{ __('City/State') }}" required
-                                autocomplete="address2">
-
-                            <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input id="address3" type="text"
-                                        class="form-group-input form-control @error('address3') is-invalid @enderror"
-                                        name="address3" value="{{ old('address3') }}" placeholder="{{ __('Contry') }}"
-                                        required autocomplete="address3">
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <input id="address4" type="text"
-                                        class="form-group-input form-control @error('address4') is-invalid @enderror"
-                                        name="address4" value="{{ old('address4') }}"
-                                        placeholder="{{ __('Postcode') }}" required autocomplete="address4">
-
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-center sm:justify-end sm:mt-5 row">
-                                <div class="col-sm-6" style="text-align: initial;">
-                                    <button type="button" class="sm:mt-0 button--simple btn btn-liq-main"
-                                        data-action="prev">
-                                        Back
-                                    </button>
-                                    <button type="button" class="btn btn-liq-main" data-action="next">
-                                        Continue
-                                    </button>
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="signup">
-                                        Already have an account ?
-                                        <a href="#" onclick="toggleForm();">Sign In.</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- / End Step 2 -->
-
-                        <!-- Step 3 -->
-                        <section id="progress-form__panel-3" role="tabpanel" aria-labelledby="progress-form__tab-3"
-                            tabindex="0" hidden>
-                            <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input id="bank-name" type="text"
-                                        class="form-group-input form-control @error('bank-name') is-invalid @enderror"
-                                        name="bank-name" value="{{ old('bank-name') }}"
-                                        placeholder="{{ __('Bank Name') }}" required autocomplete="bank-name">
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <input id="bank-code" type="text"
-                                        class="form-group-input form-control @error('bank-code') is-invalid @enderror"
-                                        name="bank-code" value="{{ old('bank-code') }}"
-                                        placeholder="{{ __('Code') }}" required autocomplete="bank-code">
-
-                                </div>
-                            </div>
-
-                            <input id="bank-account-name" type="text"
-                                class="form-control @error('bank-account-name') is-invalid @enderror"
-                                name="bank-account-name" value="{{ old('bank-account-name') }}"
-                                placeholder="{{ __('Bank Account Name') }}" required autocomplete="bank-account-name">
-                            <input id="bank-account-number" type="text"
-                                class="form-control @error('bank-account-number') is-invalid @enderror"
-                                name="bank-account-number" value="{{ old('bank-account-number') }}"
-                                placeholder="{{ __('Bank Account Number') }}" required
-                                autocomplete="bank-account-number">
-
-                            <div class="row">
-                                <div class="col-sm-6" style="text-align: end;">
-                                    <button type="button" class="sm:mt-0 button--simple btn btn-liq-main"
-                                        data-action="prev">
-                                        Back
-                                    </button>
-                                </div>
-                                <div class="col-sm-6" style="text-align: start;">
-                                    <button class="btn btn-liq-main" type="submit">Sign Up</button>
-                                </div>
-
-                                <div class="col-sm-12">
-                                    <p class="signup">
-                                        Already have an account ?
-                                        <a href="#" onclick="toggleForm();">Sign In.</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                        </section>
-                        <!-- / End Step 3 -->
+                        </div>
 
                     </form>
-                    <!-- / End Progress Form -->
                 </div>
                 <div class="imgBx"><img src="\global_assets\images\card-banners\card1.png" alt="" /></div>
             </div>
@@ -259,822 +186,13 @@
                 $('#container').removeClass('active_44');
             }
         };
-
-
-        console.clear();
-
-        function ready(fn) {
-            if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                setTimeout(fn, 1);
-                document.removeEventListener('DOMContentLoaded', fn);
-            } else {
-                document.addEventListener('DOMContentLoaded', fn);
-            }
-        }
-
-        ready(function() {
-
-            // Global Constants
-
-            const progressForm = document.getElementById('progress-form');
-
-            const tabItems = progressForm.querySelectorAll('[role="tab"]'),
-                tabPanels = progressForm.querySelectorAll('[role="tabpanel"]');
-
-            let currentStep = 0;
-
-            // Form Validation
-
-            /*****************************************************************************
-             * Expects a string.
-             *
-             * Returns a boolean if the provided value *reasonably* matches the pattern
-             * of a US phone number. Optional extension number.
-             */
-
-            const isValidPhone = val => {
-                const regex = new RegExp(/^[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?$/);
-
-                return regex.test(val);
-            };
-
-            /*****************************************************************************
-             * Expects a string.
-             *
-             * Returns a boolean if the provided value *reasonably* matches the pattern
-             * of a real email address.
-             *
-             * NOTE: There is no such thing as a perfect regular expression for email
-             *       addresses; further, the validity of an email address cannot be
-             *       verified on the front end. This is the closest we can get without
-             *       our own service or a service provided by a third party.
-             *
-             * RFC 5322 Official Standard: https://emailregex.com/
-             */
-
-            const isValidEmail = val => {
-                const regex = new RegExp(
-                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                );
-
-                return regex.test(val);
-            };
-
-            /*****************************************************************************
-             * Expects a Node (input[type="text"] or textarea).
-             */
-
-            const validateText = field => {
-                const val = field.value.trim();
-
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            };
-
-            /*****************************************************************************
-             * Expects a Node (select).
-             */
-
-            const validateSelect = field => {
-                const val = field.value.trim();
-
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false,
-                        message: 'Please select an option from the dropdown menu.'
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            };
-
-            /*****************************************************************************
-             * Expects a Node (fieldset).
-             */
-
-            const validateGroup = fieldset => {
-                const choices = fieldset.querySelectorAll('input[type="radio"], input[type="checkbox"]');
-
-                let isRequired = false,
-                    isChecked = false;
-
-                for (const choice of choices) {
-                    if (choice.required) {
-                        isRequired = true;
-                    }
-
-                    if (choice.checked) {
-                        isChecked = true;
-                    }
-                }
-
-                if (!isChecked && isRequired) {
-                    return {
-                        isValid: false,
-                        message: 'Please make a selection.'
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            };
-
-            /*****************************************************************************
-             * Expects a Node (input[type="radio"] or input[type="checkbox"]).
-             */
-
-            const validateChoice = field => {
-                return validateGroup(field.closest('fieldset'));
-            };
-
-            /*****************************************************************************
-             * Expects a Node (input[type="tel"]).
-             */
-
-            const validatePhone = field => {
-                const val = field.value.trim();
-
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false
-                    };
-
-                } else if (val !== '' && !isValidPhone(val)) {
-                    return {
-                        isValid: false,
-                        message: 'Please provide a valid US phone number.'
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            };
-
-            /*****************************************************************************
-             * Expects a Node (input[type="email"]).
-             */
-
-            const validateEmail = field => {
-                const val = field.value.trim();
-
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false
-                    };
-
-                } else if (val !== '' && !isValidEmail(val)) {
-                    return {
-                        isValid: false,
-                        message: 'Please provide a valid email address.'
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            };
-
-
-            const validateDate = field => {
-                const val = field.value.trim();
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            }
-
-
-            const validatePassword = field => {
-                const val = field.value.trim();
-                if (val === '' && field.required) {
-                    return {
-                        isValid: false
-                    };
-
-                } else {
-                    return {
-                        isValid: true
-                    };
-
-                }
-            }
-
-            /*****************************************************************************
-             * Expects a Node (field or fieldset).
-             *
-             * Returns an object describing the field's overall validity, as well as
-             * a possible error message where additional information may be helpful for
-             * the user to complete the field.
-             */
-
-            const getValidationData = field => {
-                switch (field.type) {
-                    case 'text':
-                    case 'textarea':
-                        return validateText(field);
-                    case 'select-one':
-                        return validateSelect(field);
-                    case 'fieldset':
-                        return validateGroup(field);
-                    case 'radio':
-                    case 'checkbox':
-                        return validateChoice(field);
-                    case 'tel':
-                        return validatePhone(field);
-                    case 'email':
-                        return validateEmail(field);
-                    case 'date':
-                        return validateDate(field);
-                    case 'password':
-                        return validatePassword(field);
-                    default:
-                        throw new Error(
-                            `The provided field type '${field.tagName}:${field.type}' is not supported in this form.`
-                        );
-                }
-
-            };
-
-            /*****************************************************************************
-             * Expects a Node (field or fieldset).
-             *
-             * Returns the field's overall validity based on conditions set within
-             * `getValidationData()`.
-             */
-
-            const isValid = field => {
-                return getValidationData(field).isValid;
-            };
-
-            /*****************************************************************************
-             * Expects an integer.
-             *
-             * Returns a promise that either resolves if all fields in a given step are
-             * valid, or rejects and returns invalid fields for further processing.
-             */
-
-            const validateStep = currentStep => {
-                const fields = tabPanels[currentStep].querySelectorAll(
-                    'fieldset, input:not([type="radio"]):not([type="checkbox"]), select, textarea');
-
-                const invalidFields = [...fields].filter(field => {
-                    return !isValid(field);
-                });
-
-                return new Promise((resolve, reject) => {
-                    if (invalidFields && !invalidFields.length) {
-                        resolve();
-                    } else {
-                        reject(invalidFields);
-                    }
-                });
-            };
-
-            // Form Error and Success
-
-            const FIELD_PARENT_CLASS = 'form__field',
-                FIELD_ERROR_CLASS = 'form__error-text';
-
-            /*****************************************************************************
-             * Expects a Node (fieldset) that contains any number of radio or checkbox
-             * input elements, and a string representing the group's validation status.
-             */
-
-            function updateChoice(fieldset, status, errorId = '') {
-                const choices = fieldset.querySelectorAll('[type="radio"], [type="checkbox"]');
-
-                for (const choice of choices) {
-                    if (status) {
-                        choice.setAttribute('aria-invalid', 'true');
-                        choice.setAttribute('aria-describedby', errorId);
-                    } else {
-                        choice.removeAttribute('aria-invalid');
-                        choice.removeAttribute('aria-describedby');
-                    }
-                }
-            }
-
-            /*****************************************************************************
-             * Expects a Node (field or fieldset) that either has the class name defined
-             * by `FIELD_PARENT_CLASS`, or has a parent with that class name. Optional
-             * string defines the error message.
-             *
-             * Builds and appends an error message to the parent element, or updates an
-             * existing error message.
-             *
-             * https://www.davidmacd.com/blog/test-aria-describedby-errormessage-aria-live.html
-             */
-
-            function reportError(field, message = 'Please complete this required field.') {
-                const fieldParent = field.closest(`.${FIELD_PARENT_CLASS}`);
-
-                if (progressForm.contains(fieldParent)) {
-                    let fieldError = fieldParent.querySelector(`.${FIELD_ERROR_CLASS}`),
-                        fieldErrorId = '';
-
-                    if (!fieldParent.contains(fieldError)) {
-                        fieldError = document.createElement('p');
-
-                        if (field.matches('fieldset')) {
-                            fieldErrorId = `${field.id}__error`;
-
-                            updateChoice(field, true, fieldErrorId);
-                        } else if (field.matches('[type="radio"], [type="checkbox"]')) {
-                            fieldErrorId = `${field.closest('fieldset').id}__error`;
-
-                            updateChoice(field.closest('fieldset'), true, fieldErrorId);
-                        } else {
-                            fieldErrorId = `${field.id}__error`;
-
-                            field.setAttribute('aria-invalid', 'true');
-                            field.setAttribute('aria-describedby', fieldErrorId);
-                        }
-
-                        fieldError.id = fieldErrorId;
-                        fieldError.classList.add(FIELD_ERROR_CLASS);
-
-                        fieldParent.appendChild(fieldError);
-                    }
-
-                    fieldError.textContent = message;
-                }
-            }
-
-            /*****************************************************************************
-             * Expects a Node (field or fieldset) that either has the class name defined
-             * by `FIELD_PARENT_CLASS`, or has a parent with that class name.
-             *
-             * https://www.davidmacd.com/blog/test-aria-describedby-errormessage-aria-live.html
-             */
-
-            function reportSuccess(field) {
-                const fieldParent = field.closest(`.${FIELD_PARENT_CLASS}`);
-
-                if (progressForm.contains(fieldParent)) {
-                    const fieldError = fieldParent.querySelector(`.${FIELD_ERROR_CLASS}`);
-
-                    if (fieldParent.contains(fieldError)) {
-                        if (field.matches('fieldset')) {
-                            updateChoice(field, false);
-                        } else if (field.matches('[type="radio"], [type="checkbox"]')) {
-                            updateChoice(field.closest('fieldset'), false);
-                        } else {
-                            field.removeAttribute('aria-invalid');
-                            field.removeAttribute('aria-describedby');
-                        }
-
-                        fieldParent.removeChild(fieldError);
-                    }
-                }
-            }
-
-            /*****************************************************************************
-             * Expects a Node (field or fieldset).
-             *
-             * Reports the field's overall validity to the user based on conditions set
-             * within `getValidationData()`.
-             */
-
-            function reportValidity(field) {
-                const validation = getValidationData(field);
-
-                if (!validation.isValid && validation.message) {
-                    reportError(field, validation.message);
-                } else if (!validation.isValid) {
-                    reportError(field);
-                } else {
-                    reportSuccess(field);
-                }
-            }
-
-            // Form Progression
-
-            /*****************************************************************************
-             * Resets the state of all tabs and tab panels.
-             */
-
-            function deactivateTabs() {
-                // Reset state of all tab items
-                tabItems.forEach(tab => {
-                    tab.setAttribute('aria-selected', 'false');
-                    tab.setAttribute('tabindex', '-1');
-                });
-
-                // Reset state of all panels
-                tabPanels.forEach(panel => {
-                    panel.setAttribute('hidden', '');
-                });
-            }
-
-            /*****************************************************************************
-             * Expects an integer.
-             *
-             * Shows the desired tab and its associated tab panel, then updates the form's
-             * current step to match the tab's index.
-             */
-
-            function activateTab(index) {
-                const thisTab = tabItems[index],
-                    thisPanel = tabPanels[index];
-
-                // Close all other tabs
-                deactivateTabs();
-
-                // Focus the activated tab for accessibility
-                thisTab.focus();
-
-                // Set the interacted tab to active
-                thisTab.setAttribute('aria-selected', 'true');
-                thisTab.removeAttribute('tabindex');
-
-                // Display the associated tab panel
-                thisPanel.removeAttribute('hidden');
-
-                // Update the current step with the interacted tab's index value
-                currentStep = index;
-            }
-
-            /*****************************************************************************
-             * Expects an event from a click listener.
-             */
-
-            function clickTab(e) {
-                activateTab([...tabItems].indexOf(e.currentTarget));
-            }
-
-            /*****************************************************************************
-             * Expects an event from a keydown listener.
-             */
-
-            function arrowTab(e) {
-                const {
-                    keyCode,
-                    target
-                } = e;
-
-                /**
-                 * If the current tab has an enabled next/previous sibling, activate it.
-                 * Otherwise, activate the tab at the beginning/end of the list.
-                 */
-
-                const targetPrev = target.previousElementSibling,
-                    targetNext = target.nextElementSibling,
-                    targetFirst = target.parentElement.firstElementChild,
-                    targetLast = target.parentElement.lastElementChild;
-
-                const isDisabled = node => node.hasAttribute('aria-disabled');
-
-                switch (keyCode) {
-                    case 37: // Left arrow
-                        if (progressForm.contains(targetPrev) && !isDisabled(targetPrev)) {
-                            activateTab(currentStep - 1);
-                        } else if (!isDisabled(targetLast)) {
-                            activateTab(tabItems.length - 1);
-                        }
-                        break;
-                    case 39: // Right arrow
-                        if (progressForm.contains(targetNext) && !isDisabled(targetNext)) {
-                            activateTab(currentStep + 1);
-                        } else if (!isDisabled(targetFirst)) {
-                            activateTab(0);
-                        }
-                        break;
-                }
-
-            }
-
-            /*****************************************************************************
-             * Expects a boolean.
-             *
-             * Updates the visual state of the progress bar and makes the next tab
-             * available for interaction (if there is a next tab).
-             */
-
-            // Immediately attach event listeners to the first tab (happens only once)
-            tabItems[0].addEventListener('click', clickTab);
-            tabItems[0].addEventListener('keydown', arrowTab);
-
-            function handleProgress(isComplete) {
-                const currentTab = tabItems[currentStep],
-                    nextTab = tabItems[currentStep + 1];
-
-                if (isComplete) {
-                    currentTab.setAttribute('data-complete', 'true');
-
-                    /**
-                     * Verify that there is, indeed, a next tab before modifying or listening
-                     * to it. In case we've reached the last item in the tablist.
-                     */
-
-                    if (progressForm.contains(nextTab)) {
-                        nextTab.removeAttribute('aria-disabled');
-
-                        nextTab.addEventListener('click', clickTab);
-                        nextTab.addEventListener('keydown', arrowTab);
-                    }
-
-                } else {
-                    currentTab.setAttribute('data-complete', 'false');
-                }
-            }
-
-            // Form Interactions
-
-            /*****************************************************************************
-             * Returns a function that only executes after a delay.
-             *
-             * https://davidwalsh.name/javascript-debounce-function
-             */
-
-            const debounce = (fn, delay = 500) => {
-                let timeoutID;
-
-                return (...args) => {
-                    if (timeoutID) {
-                        clearTimeout(timeoutID);
-                    }
-
-                    timeoutID = setTimeout(() => {
-                        fn.apply(null, args);
-                        timeoutID = null;
-                    }, delay);
-                };
-            };
-
-            /*****************************************************************************
-             * Waits 0.5s before reacting to any input events. This reduces the frequency
-             * at which the listener is fired, making the errors less "noisy". Improves
-             * both performance and user experience.
-             */
-
-            progressForm.addEventListener('input', debounce(e => {
-                const {
-                    target
-                } = e;
-
-                validateStep(currentStep).then(() => {
-
-                    // Update the progress bar (step complete)
-                    handleProgress(true);
-
-                }).catch(() => {
-
-                    // Update the progress bar (step incomplete)
-                    handleProgress(false);
-
-                });
-
-                // Display or remove any error messages
-                reportValidity(target);
-            }));
-
-            /****************************************************************************/
-
-            progressForm.addEventListener('click', e => {
-                const {
-                    target
-                } = e;
-
-                if (target.matches('[data-action="next"]')) {
-                    validateStep(currentStep).then(() => {
-
-                        // Update the progress bar (step complete)
-                        handleProgress(true);
-
-                        // Progress to the next step
-                        activateTab(currentStep + 1);
-
-                    }).catch(invalidFields => {
-
-                        // Update the progress bar (step incomplete)
-                        handleProgress(false);
-
-                        // Show errors for any invalid fields
-                        invalidFields.forEach(field => {
-                            reportValidity(field);
-                        });
-
-                        // Focus the first found invalid field for the user
-                        invalidFields[0].focus();
-
-                    });
-                }
-
-                if (target.matches('[data-action="prev"]')) {
-
-                    // Revisit the previous step
-                    activateTab(currentStep - 1);
-
-                }
-            });
-
-            // Form Submission
-
-            /*****************************************************************************
-             * Returns the user's IP address.
-             */
-
-            async function getIP(url = 'https://api.ipify.org?format=json') {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-
-
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-
-                return response.json();
-            }
-
-            /*****************************************************************************
-             * POSTs to the specified endpoint.
-             */
-
-            async function postData(url = '', data = {}) {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-
-                    body: JSON.stringify(data)
-                });
-
-
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-
-                return response.json();
-            }
-
-            /****************************************************************************/
-
-            function disableSubmit() {
-                const submitButton = progressForm.querySelector('[type="submit"]');
-
-                if (progressForm.contains(submitButton)) {
-
-                    // Update the state of the submit button
-                    submitButton.setAttribute('disabled', '');
-                    submitButton.textContent = 'Submitting...';
-
-                }
-            }
-
-            /****************************************************************************/
-
-            function handleSuccess(response) {
-                const thankYou = progressForm.querySelector('#progress-form__thank-you');
-
-                // Clear all HTML Nodes that are not the thank you panel
-                while (progressForm.firstElementChild !== thankYou) {
-                    if (window.CP.shouldStopExecution(0)) break;
-                    progressForm.removeChild(progressForm.firstElementChild);
-                }
-                window.CP.exitedLoop(0);
-
-                thankYou.removeAttribute('hidden');
-
-                // Logging the response from httpbin for quick verification
-                console.log(response);
-            }
-
-            /****************************************************************************/
-
-            function handleError(error) {
-                const submitButton = progressForm.querySelector('[type="submit"]');
-
-                if (progressForm.contains(submitButton)) {
-                    const errorText = document.createElement('p');
-
-                    // Reset the state of the submit button
-                    submitButton.removeAttribute('disabled');
-                    submitButton.textContent = 'Submit';
-
-                    // Display an error message for the user
-                    errorText.classList.add('m-0', 'form__error-text');
-                    errorText.textContent = `Sorry, your submission could not be processed.
-        Please try again. If the issue persists, please contact our support
-        team. Error message: ${error}`;
-
-                    submitButton.parentElement.prepend(errorText);
-                }
-            }
-
-            /****************************************************************************/
-
-            progressForm.addEventListener('submit', e => {
-
-                // Prevent the form from submitting
-                e.preventDefault();
-
-                // Get the API endpoint using the form action attribute
-                const form = e.currentTarget,
-                    API = new URL(form.action);
-
-                validateStep(currentStep).then(() => {
-
-                    // Indicate that the submission is working
-                    disableSubmit();
-
-                    // Prepare the data
-                    const formData = new FormData(form),
-                        formTime = new Date().getTime(),
-                        formFields = [];
-
-                    // Format the data entries
-                    for (const [name, value] of formData) {
-                        formFields.push({
-                            'name': name,
-                            'value': value
-                        });
-
-                    }
-
-                    // Get the user's IP address (for fun)
-                    // Build the final data structure, including the IP
-                    // POST the data and handle success or error
-                    getIP().then(response => {
-                        return {
-                            'fields': formFields,
-                            'meta': {
-                                'submittedAt': formTime,
-                                'ipAddress': response.ip
-                            }
-                        };
-
-
-                    }).
-                    then(data => postData(API, data)).
-                    then(response => {
-                        setTimeout(() => {
-                                handleSuccess(response);
-                            },
-                            5000
-                        ); // An artificial delay to show the state of the submit button
-                    }).
-                    catch(error => {
-                        setTimeout(() => {
-                                handleError(error);
-                            },
-                            5000
-                        ); // An artificial delay to show the state of the submit button
-                    });
-
-                }).catch(invalidFields => {
-
-                    // Show errors for any invalid fields
-                    invalidFields.forEach(field => {
-                        reportValidity(field);
-                    });
-
-                    // Focus the first found invalid field for the user
-                    invalidFields[0].focus();
-
-                });
-            });
-        });
     </script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
         /* ==========================================================================
-                               Variables
-                               ========================================================================== */
+                                                                   Variables
+                                                                   ========================================================================== */
 
         :root {
             /* --- Colors --- */
@@ -1122,57 +240,57 @@
         }
 
         /* ==========================================================================
-                               Base
-                               ========================================================================== */
+                                                                   Base
+                                                                   ========================================================================== */
 
         /**
-                             * Reset box-sizing on all elements
-                             *
-                             * `border-box` includes padding and border in the calculations for total
-                             * width, height values. This is more predictable than the default
-                             * `content-box`, which does the opposite.
-                             *
-                             * 1. Apply `inherit` to all elements (global selector)
-                             * 2. Apply the same with a global selector for pseudo-elements
-                             */
+                                                                 * Reset box-sizing on all elements
+                                                                 *
+                                                                 * `border-box` includes padding and border in the calculations for total
+                                                                 * width, height values. This is more predictable than the default
+                                                                 * `content-box`, which does the opposite.
+                                                                 *
+                                                                 * 1. Apply `inherit` to all elements (global selector)
+                                                                 * 2. Apply the same with a global selector for pseudo-elements
+                                                                 */
 
 
         /**
-                             * 1. Now add `border-box` to `html`, which will cascade down through all
-                             *    elements, but leaves box-sizing easy to overwrite on a parent component
-                             *
-                             *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-                             *
-                             * 2. Set `html` font size to 62.5%, equal to 10px or 1rem
-                             *
-                             *    https://css-tricks.com/accessible-font-sizing-explained/
-                             *
-                             * 3. Set up full viewport height for sticky footer
-                             * 4. Prevent font size adjustment after orientation change in iOS
-                             */
+                                                                 * 1. Now add `border-box` to `html`, which will cascade down through all
+                                                                 *    elements, but leaves box-sizing easy to overwrite on a parent component
+                                                                 *
+                                                                 *    https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+                                                                 *
+                                                                 * 2. Set `html` font size to 62.5%, equal to 10px or 1rem
+                                                                 *
+                                                                 *    https://css-tricks.com/accessible-font-sizing-explained/
+                                                                 *
+                                                                 * 3. Set up full viewport height for sticky footer
+                                                                 * 4. Prevent font size adjustment after orientation change in iOS
+                                                                 */
 
 
         /* ==========================================================================
-                               Accessibility
-                               ========================================================================== */
+                                                                   Accessibility
+                                                                   ========================================================================== */
 
         /* Visibility
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         /**
-                             * Visually hidden class
-                             *
-                             * Hides content to visual users, but leaves it accessible to screen reader
-                             * users. The combination of these properties will ensure that the element
-                             * is truly hidden and not getting smushed in the corner of the screen.
-                             *
-                             * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-                             *
-                             * 1. For long content, line feeds are not interpreted as spaces and small width
-                             *    causes content to wrap 1 word per line:
-                             *
-                             *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-                             */
+                                                                 * Visually hidden class
+                                                                 *
+                                                                 * Hides content to visual users, but leaves it accessible to screen reader
+                                                                 * users. The combination of these properties will ensure that the element
+                                                                 * is truly hidden and not getting smushed in the corner of the screen.
+                                                                 *
+                                                                 * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+                                                                 *
+                                                                 * 1. For long content, line feeds are not interpreted as spaces and small width
+                                                                 *    causes content to wrap 1 word per line:
+                                                                 *
+                                                                 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+                                                                 */
 
         .visually-hidden {
             border: 0;
@@ -1189,26 +307,26 @@
         }
 
         /* ==========================================================================
-                               CSS Flex
-                               ========================================================================== */
+                                                                   CSS Flex
+                                                                   ========================================================================== */
 
         /* Flex Parent
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         /**
-                             * These classes are named in the format `{breakpoint}:flex-{property}`
-                             *
-                             * Where `{breakpoint}` is one of sm, md, or lg
-                             *
-                             * Where `{property}` is one of:
-                             *    row
-                             *    row-reverse
-                             *    column
-                             *    column-reverse
-                             *    wrap
-                             *    wrap-reverse
-                             *    wrap-nowrap
-                             */
+                                                                 * These classes are named in the format `{breakpoint}:flex-{property}`
+                                                                 *
+                                                                 * Where `{breakpoint}` is one of sm, md, or lg
+                                                                 *
+                                                                 * Where `{property}` is one of:
+                                                                 *    row
+                                                                 *    row-reverse
+                                                                 *    column
+                                                                 *    column-reverse
+                                                                 *    wrap
+                                                                 *    wrap-reverse
+                                                                 *    wrap-nowrap
+                                                                 */
 
         .flex-row {
             flex-direction: row;
@@ -1329,19 +447,19 @@
         }
 
         /* Flex Children
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         /**
-                             * These classes are named in the format `{breakpoint}:flex-{property}`
-                             *
-                             * Where `{breakpoint}` is one of sm, md, or lg
-                             *
-                             * Where `{property}` is one of:
-                             *    1 - Allows the flex item the grow and shrink, 0% basis
-                             *    auto - Allows the flex item to grow and shrink, auto basis
-                             *    initial - Allows the flex item to shrink but not grow, auto basis
-                             *    none - Prevents the flex item from growing or shrinking
-                             */
+                                                                 * These classes are named in the format `{breakpoint}:flex-{property}`
+                                                                 *
+                                                                 * Where `{breakpoint}` is one of sm, md, or lg
+                                                                 *
+                                                                 * Where `{property}` is one of:
+                                                                 *    1 - Allows the flex item the grow and shrink, 0% basis
+                                                                 *    auto - Allows the flex item to grow and shrink, auto basis
+                                                                 *    initial - Allows the flex item to shrink but not grow, auto basis
+                                                                 *    none - Prevents the flex item from growing or shrinking
+                                                                 */
 
         .flex-1 {
             flex: 1 1 0%;
@@ -1414,19 +532,19 @@
         }
 
         /* ==========================================================================
-                               CSS Grid
-                               ========================================================================== */
+                                                                   CSS Grid
+                                                                   ========================================================================== */
 
         /* Grid Children
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         /**
-                             * These classes are named in the format `{breakpoint}:col-{count}`
-                             *
-                             * Where `{breakpoint}` is one of sm, md, or lg
-                             *
-                             * Where `{count}` is a number 1 - 6
-                             */
+                                                                 * These classes are named in the format `{breakpoint}:col-{count}`
+                                                                 *
+                                                                 * Where `{breakpoint}` is one of sm, md, or lg
+                                                                 *
+                                                                 * Where `{count}` is a number 1 - 6
+                                                                 */
 
         .grid-col-1 {
             grid-template-columns: 1fr;
@@ -1531,7 +649,7 @@
         }
 
         /* Errors
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         input[aria-invalid="true"],
         select[aria-invalid="true"],
@@ -1559,7 +677,7 @@
         }
 
         /* Tabs
-                               ========================================================================== */
+                                                                   ========================================================================== */
 
         .progress-form__tabs {
             column-gap: 0;
