@@ -443,8 +443,6 @@ class HomeController extends Controller
         $User->type = 2;
         //type = Admin
         $User->save();
-
-        dd($User);
         // if(){
 
         // }else{
