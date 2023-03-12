@@ -182,7 +182,7 @@
                                 html += '<img src="\static\Image-2-1.jpg" class="img-grid-view" />';
                             }
                             html += '<h1>' + element.name + '</h1>';
-                            html += '<p class="portfolio-product-price">$' + element.g_regular_price +
+                            html += '<p class="portfolio-product-price">LKR' + element.g_regular_price +
                                 '</p>';
                             html += '</div>';
                             html += '</div>';

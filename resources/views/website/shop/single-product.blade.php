@@ -166,9 +166,9 @@
                             $productDetails->g_sale_price_date != null &&
                                 $toDay <= $productDetails->g_sale_price_date &&
                                 $timeNow <= $productDetails->g_sale_price_time)
-                            <h6 class="single-product-price" id="price">${{ $productDetails->g_sale_price }}</h6>
+                            <h6 class="single-product-price" id="price">LKR {{ $productDetails->g_sale_price }}</h6>
                         @else
-                            <h6 class="single-product-price" id="price">${{ $productDetails->g_regular_price }}</h6>
+                            <h6 class="single-product-price" id="price">LKR {{ $productDetails->g_regular_price }}</h6>
                         @endif
 
                         <a href="#product_rate" rel="modal:open">

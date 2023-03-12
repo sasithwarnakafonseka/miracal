@@ -1,5 +1,7 @@
 @extends('website.layout.app')
-@section('title') Checkout @endsection
+@section('title')
+    Checkout
+@endsection
 @section('content')
     <main role="main">
 
@@ -22,9 +24,7 @@
                         @endphp
 
                         @if (session('cart'))
-
                             @foreach (session('cart') as $id => $details)
-
                                 @php
                                     $total += $details['price'] * $details['quantity'];
                                     $totel_items += $details['quantity'];
@@ -36,15 +36,14 @@
                                             <h6 class="my-0">{{ $details['name'] }}</h6>
                                             <small class="text-muted">Quantity: {{ $details['quantity'] }}</small>
                                         </div>
-                                        <div class="col-sm-4"> <span
-                                                class="text-muted">${{ $details['price'] * $details['quantity'] }}</span>
+                                        <div class="col-sm-4"> <span class="text-muted">LKR
+                                                {{ $details['price'] * $details['quantity'] }}</span>
                                         </div>
 
                                     </div>
 
                                 </li>
                             @endforeach
-
                         @endif
                     </ul>
                     @php
@@ -53,7 +52,7 @@
                         $Total = $total + $Shipping - $Discount;
                     @endphp
                     <span class="badge badge-secondary badge-pill mb-2">Total Items: {{ $totel_items }}</span>
-                    <span class="badge badge-secondary badge-pill mb-2">Total: ${{ $Total }}</span>
+                    <span class="badge badge-secondary badge-pill mb-2">Total: LKR {{ $Total }}</span>
                     {{-- <form class="card p-2">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Promo code">
@@ -65,18 +64,20 @@
                 </div>
                 <div class="col-md-8 order-md-1" style="text-align: left">
                     <h4 class="mb-3">Billing address</h4>
-                    <form method="POST" action="{{ route('add.neworder') }}" class="needs-validation"  novalidate="">
+                    <form method="POST" action="{{ route('add.neworder') }}" class="needs-validation" novalidate="">
                         @csrf
-                        <input type="hidden" name="total_price" value="{{$Total}}" id="total_price">
+                        <input type="hidden" name="total_price" value="{{ $Total }}" id="total_price">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">First name</label>
-                                <input type="text" name="firstName" class="form-control" id="firstName" placeholder="" value="" required="">
+                                <input type="text" name="firstName" class="form-control" id="firstName" placeholder=""
+                                    value="" required="">
                                 <div class="invalid-feedback"> Valid first name is required. </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Last name</label>
-                                <input type="text" name="lastName" class="form-control" id="lastName" placeholder="" value="" required="">
+                                <input type="text" name="lastName" class="form-control" id="lastName" placeholder=""
+                                    value="" required="">
                                 <div class="invalid-feedback"> Valid last name is required. </div>
                             </div>
                         </div>
@@ -86,28 +87,34 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">@</span>
                                 </div>
-                                <input type="text" name="username" class="form-control" value="@if (Auth::user()){{Auth::user()->name}} @endif" id="username" placeholder="Username" required="">
+                                <input type="text" name="username" class="form-control"
+                                    value="@if (Auth::user()) {{ Auth::user()->name }} @endif" id="username"
+                                    placeholder="Username" required="">
                                 <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="email">Email </label>
-                            <input type="email" name="email" class="form-control" id="email" value="@if (Auth::user()){{Auth::user()->email}}@endif" placeholder="you@example.com">
+                            <input type="email" name="email" class="form-control" id="email"
+                                value="@if (Auth::user()) {{ Auth::user()->email }} @endif"
+                                placeholder="you@example.com">
                             <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
                         </div>
                         <div class="mb-3">
                             <label for="address">Address</label>
-                            <input type="text" name="address" class="form-control" id="address" value="" placeholder="1234 Main St" required="">
+                            <input type="text" name="address" class="form-control" id="address" value=""
+                                placeholder="1234 Main St" required="">
                             <div class="invalid-feedback"> Please enter your shipping address. </div>
                         </div>
                         <div class="mb-3">
                             <label for="address2">Address 2 </label>
-                            <input type="text"  name="address2" class="form-control" id="address2" placeholder="Apartment or suite">
+                            <input type="text" name="address2" class="form-control" id="address2"
+                                placeholder="Apartment or suite">
                         </div>
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Country</label>
-                                <select class="custom-select d-block w-100" id="country"  name="country" required="">
+                                <select class="custom-select d-block w-100" id="country" name="country" required="">
                                     <option value="">Choose...</option>
                                     <option>United States</option>
                                 </select>
@@ -115,7 +122,8 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">State</label>
-                                <select class="custom-select d-block w-100" id="state" name="state" required="">
+                                <select class="custom-select d-block w-100" id="state" name="state"
+                                    required="">
                                     <option value="">Choose...</option>
                                     <option>California</option>
                                 </select>
@@ -123,7 +131,8 @@
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>
-                                <input type="text" class="form-control" id="zip" name="zip" placeholder="" required="">
+                                <input type="text" class="form-control" id="zip" name="zip" placeholder=""
+                                    required="">
                                 <div class="invalid-feedback"> Zip code required. </div>
                             </div>
                         </div>

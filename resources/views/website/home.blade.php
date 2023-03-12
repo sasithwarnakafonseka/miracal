@@ -122,7 +122,7 @@
                     <div id="best-sellers-slider" class="best-sellers-banner owl-carousel owl-theme">
                         @foreach ($bestSell as $bestSellitem)
                             @php
-                                $UrlNmae = str_replace('/', '', $bestSellitem->name);
+                                $UrlNmae = str_replace('/', '-', $bestSellitem->name);
                             @endphp
 
                             <div class="item card-product" style="">
@@ -175,9 +175,7 @@
         <!-- Wellcome end -->
 
         <!-- Wellcome start -->
-        @if (count($PRESENTS['SKINCARE']) > 0 ||
-            count($PRESENTS['HAIRCARE']) > 0 ||
-            count($PRESENTS['PHARMACEUTICAL']) > 0)
+        @if (count($PRESENTS['SKINCARE']) > 0 || count($PRESENTS['HAIRCARE']) > 0 || count($PRESENTS['PHARMACEUTICAL']) > 0)
             <section class="presents-sec section">
                 <div class="row" style="margin-left: 0px; margin-right: 0px">
                     <div class="col-md-12 text-center section-heading">
@@ -209,7 +207,11 @@
                                     <div class="tab-pane active" id="tab_default_1">
                                         <div id="best-sellers-slider " class="best-sellers-banner owl-carousel owl-theme">
                                             @foreach ($PRESENTS['SKINCARE'] as $item)
-                                                <a href="/shop/product/{{ $item->id }}/{{ $item->name }}">
+                                                @php
+                                                    $UrlNmae1 = str_replace('/', '-', $item->name);
+                                                @endphp
+
+                                                <a href="/shop/product/{{ $item->id }}/{{ $UrlNmae1 }}">
                                                     <div class="item card-product" style="">
                                                         <div class="text-center">
                                                             @if ($item->Image_Product_thumbnail_image_best_seller != null)
@@ -245,7 +247,10 @@
                                     <div class="tab-pane" id="tab_default_2">
                                         <div id="best-sellers-slider" class="best-sellers-banner owl-carousel owl-theme">
                                             @foreach ($PRESENTS['HAIRCARE'] as $item)
-                                                <a href="/shop/product/{{ $item->id }}/{{ $item->name }}">
+                                                @php
+                                                    $UrlNmae2 = str_replace('/', '-', $item->name);
+                                                @endphp
+                                                <a href="/shop/product/{{ $item->id }}/{{ $UrlNmae2 }}">
                                                     <div class="item card-product" style="">
                                                         <div class="text-center">
                                                             @if ($item->Image_Product_thumbnail_image_best_seller != null)
@@ -281,7 +286,10 @@
                                     <div class="tab-pane" id="tab_default_3">
                                         <div id="best-sellers-slider" class="best-sellers-banner owl-carousel owl-theme">
                                             @foreach ($PRESENTS['PHARMACEUTICAL'] as $item)
-                                                <a href="/shop/product/{{ $item->id }}/{{ $item->name }}">
+                                                @php
+                                                    $UrlNmae3 = str_replace('/', '-', $item->name);
+                                                @endphp
+                                                <a href="/shop/product/{{ $item->id }}/{{ $UrlNmae3 }}">
                                                     <div class="item card-product" style="">
                                                         <div class="text-center">
                                                             @if ($item->Image_Product_thumbnail_image_best_seller != null)

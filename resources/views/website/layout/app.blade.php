@@ -204,7 +204,7 @@
                                                             <div class="col-8">
                                                                 <p>{{ $details['name'] }}</p>
                                                                 <span class="price text-info">
-                                                                    ${{ $details['price'] }}</span> <span
+                                                                    LKR {{ $details['price'] }}</span> <span
                                                                     class="count">
                                                                     Quantity:{{ $details['quantity'] }}</span>
                                                             </div>

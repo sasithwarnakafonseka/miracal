@@ -55,7 +55,7 @@
                                                             <div class="col-md-3 price">
                                                                 <div class="row">
                                                                     <div class="col-md-8">
-                                                                        <span>${{ $details['price'] * $details['quantity'] }}</span>
+                                                                        <span>LKR {{ $details['price'] * $details['quantity'] }}</span>
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <button class="btn btn-liq-main remove-from-cart"
@@ -88,13 +88,13 @@
                                     $Total = $total + $Shipping - $Discount
                                 @endphp
                                 <h3>Summary</h3>
-                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Subtotal</span></div><div class="col-sm-6 text-"><span class="price">${{$total}}</span></div></div>
+                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Subtotal</span></div><div class="col-sm-6 text-"><span class="price">LKR {{$total}}</span></div></div>
                                 </div>
-                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Discount</span></div><div class="col-sm-6 text-"><span class="price">${{$Discount}}</span></div></div>
+                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Discount</span></div><div class="col-sm-6 text-"><span class="price">LKR {{$Discount}}</span></div></div>
                                 </div>
-                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Shipping</span></div><div class="col-sm-6 text-"><span class="price">${{$Shipping}}</span></div></div>
+                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Shipping</span></div><div class="col-sm-6 text-"><span class="price">LKR {{$Shipping}}</span></div></div>
                                 </div>
-                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Total</span></div><div class="col-sm-6 text-"><span class="price">${{$Total}}</span></div></div>
+                                <div class="summary-item"><div class="row"><div class="col-sm-6 text-left"><span class="text">Total</span></div><div class="col-sm-6 text-"><span class="price">LKR {{$Total}}</span></div></div>
                                 </div>
                                 <a class="cart-pg-checkout-btn-link" @if($Total>0) href="/shop/checkout" @else href="javascript:void(0)" @endif><button type="button"
                                     class="btn btn-primary btn-lg btn-block cart-pg-checkout-btn">Place Order</button></a>
