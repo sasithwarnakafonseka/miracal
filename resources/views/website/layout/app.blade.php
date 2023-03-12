@@ -124,7 +124,9 @@
                                 <a href="{{ route('/') }}" class="nav-link">HOME</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" id 
+                                <a href="#" class="nav-link dropdown-toggle" id="navbarLandings"
+                                    data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                                    SHOP
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarLandings">
                                     <div class="tab">
