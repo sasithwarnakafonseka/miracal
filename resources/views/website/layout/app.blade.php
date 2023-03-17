@@ -80,7 +80,7 @@
     <div class="elfsight-app-2e73e14f-8c28-4155-9fd9-4cbf2fa38175"></div>
     <div class="container-fluid d-flex p-0 mx-auto flex-column">
         <header class="mb-auto">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation" id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation web-tab-navmenu-bar" id="navbar">
                 <div class="container">
                     <a class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img class="site-logo"
                             alt="Miracle" src="/global_assets/images/logo-menu.png"></a>

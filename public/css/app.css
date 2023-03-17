@@ -111,6 +111,10 @@
     padding: 0;
 }
 
+.web-nav-cus{
+    display: none;
+}
+
 .navbar>.container {
     display: flex;
     flex-wrap: wrap;
@@ -9681,6 +9685,10 @@ button:focus {
         border-bottom: 2px solid #AE7529;
     }
 
+    .web-tab-navmenu-bar {
+        display:none;
+    }
+
     .fa-shopping-cart:before {
         color: #006738;
         margin-top: 10px;
@@ -10641,8 +10649,8 @@ button:focus {
 }
 
 .content-welcome {
+    height: 500px;
     text-align: center;
-    width: 469px;
     margin: auto;
     padding: 100px 0;
     color: aliceblue;
