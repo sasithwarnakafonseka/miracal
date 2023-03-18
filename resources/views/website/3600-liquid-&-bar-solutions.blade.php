@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-md-3 bottom-contact-us-content"></div>
                 <div class="col-md-6 bottom-contact-us-content">
-                    <p><br>e-mail: info@themiracleconcept.com<br>Telephone: +960
+                    <p><br>e-mail: info@miraclecosmatics.com<br>Telephone: +960
                         9975933<br>www.miracleaconcept.com<br><br></p>
                 </div>
                 <div class="col-md-3 bottom-contact-us-content"></div>

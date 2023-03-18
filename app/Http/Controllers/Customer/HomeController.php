@@ -450,8 +450,8 @@ class HomeController extends Controller
         // }
         if ($User) {
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("hello@themiracleconcept.com", "hello@themiracleconcept");
-            $email->setSubject("Wellcome :: themiracleconcept.com");
+            $email->setFrom("hello@miraclecosmatics.com", "hello@miraclecosmatics");
+            $email->setSubject("Wellcome :: miraclecosmatics.com");
             $email->addTo($user_email, $user_name);
             $email->addContent(
                 "text/html", "<h3>User Register Successfully</h3><br><br><p>Wellcome:" . $user_name . "</p>"
@@ -709,11 +709,11 @@ class HomeController extends Controller
     public function contactUs(Request $request)
     {
         $email = new \SendGrid\Mail\Mail();
-        $email->setFrom($request->email);
-        $email->setSubject("Conatct us :: themiracleconcept.com");
+        $email->setFrom('info@miraclecosmatics.com');
+        $email->setSubject("Conatct us :: miraclecosmatics.com");
         $email->addTo('sasithwarnakafonseka@gmail.com');
         $email->addContent(
-            "text/html", "message::" . $request->message . "</p>"
+            "text/html", "Thank you for contact us, <br>message::" . $request->message . "</p>"
         );
         $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         try {

@@ -1,5 +1,7 @@
 @extends('website.layout.app')
-@section('title') miracle Academy @endsection
+@section('title')
+    miracle Academy
+@endsection
 @section('content')
     <main role="main">
         <div class="container content-width">
@@ -57,7 +59,6 @@
                 <div id="we_offer" class="owl-carousel owl-theme">
 
                     @foreach ($MainBanneritemSub_footer as $MainBanneritemSub_footeritem)
-
                         <div class="item">
                             <img class="img-we-offering" src="/storage/{{ $MainBanneritemSub_footeritem->img }}"><br>
                             <h1>{{ $MainBanneritemSub_footeritem->title }}</h1><br>
@@ -77,7 +78,7 @@
             <div class="row">
                 <div class="col-md-3 bottom-contact-us-content"></div>
                 <div class="col-md-6 bottom-contact-us-content">
-                    <p><br>e-mail: info@themiracleconcept.com<br>Telephone: +960
+                    <p><br>e-mail: info@miraclecosmatics.com<br>Telephone: +960
                         9975933<br>www.miracleaconcept.com<br><br></p>
                 </div>
                 <div class="col-md-3 bottom-contact-us-content"></div>
@@ -108,7 +109,8 @@
             });
         </script>
         <style>
-            .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
+            .owl-carousel .owl-dots.disabled,
+            .owl-carousel .owl-nav.disabled {
                 display: block;
             }
         </style>
