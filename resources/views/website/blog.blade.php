@@ -6,7 +6,7 @@
         <div class="container-blog">
             <div class="row blog-content">
             @foreach ($Blog as $Blogitem)
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="single-item blog-item">
                         <div class="card-blog">
                             <img class="card-img-top-blog" src="/storage/{{ $Blogitem->img }}" alt="Card image cap">
