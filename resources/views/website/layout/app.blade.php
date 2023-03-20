@@ -744,8 +744,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright-text">
-                                    <p>© 2021
-                                        Clobe by <a href="#"></a>
+                                    <p>© 2023
+                                        Clobe by <a href="#">Miracle Cosmatics</a>
                                     </p>
                                 </div>
 
