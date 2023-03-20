@@ -191,11 +191,10 @@ class HomeController extends Controller
         $MainBanneritemSub = DB::table('banner_cat')->join('banner_img', 'banner_cat.id', '=', 'banner_img.banner_cat_id')->where('banner_cat.id', 16)->where('loaction_type', 1)->inRandomOrder()->limit(1)->first();
         // $productList = Products::where();
         $productList = DB::table('products');
-
-
-
+        // $productList = $productList->join('product_categories', 'product_categories.product_id', '=', 'products.id');
         if ($Request->category) {
-            $productList = $productList->join('products_categories', 'products_categories.id', '=', 'products.id');
+            $productList = $productList->join('product_categories', 'product_categories.product_id', '=', 'products.id');
+            $productList = $productList->where('product_categories.value', $Request->category);
         }
 
         if ($Request->latest == true) {
@@ -203,7 +202,7 @@ class HomeController extends Controller
         }
 
         $productList = $productList->get();
-
+        // dd($productList);
 
         $productCatList = ProductsCategory::all();
         $productTagList = ProductsTag::all();
