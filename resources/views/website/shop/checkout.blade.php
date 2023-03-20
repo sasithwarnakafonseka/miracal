@@ -114,20 +114,24 @@
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Country</label>
-                                <select class="custom-select d-block w-100" id="country" name="country" required="">
+                                <input type="text" class="form-control" id="country" name="country"
+                                    placeholder="Country">
+                                {{-- <select class="custom-select d-block w-100" id="country" name="country" required="">
                                     <option value="">Choose...</option>
                                     <option>United States</option>
-                                </select>
-                                <div class="invalid-feedback"> Please select a valid country. </div>
+                                </select> --}}
+                                <div class="invalid-feedback"> Country required </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">State</label>
-                                <select class="custom-select d-block w-100" id="state" name="state"
+                                <input type="text" class="form-control" id="state" name="state"
+                                    placeholder="State">
+                                {{-- <select class="custom-select d-block w-100" id="state" name="state"
                                     required="">
                                     <option value="">Choose...</option>
                                     <option>California</option>
-                                </select>
-                                <div class="invalid-feedback"> Please provide a valid state. </div>
+                                </select> --}}
+                                <div class="invalid-feedback"> State required </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>

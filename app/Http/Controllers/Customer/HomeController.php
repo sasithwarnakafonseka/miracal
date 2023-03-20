@@ -413,6 +413,7 @@ class HomeController extends Controller
         // dd($request);
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:users',
+            'phone' => 'required|phone|unique:users',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
         if ($validator->fails()) {
@@ -424,7 +425,7 @@ class HomeController extends Controller
         }
 
         $validat_val = $validator->validate();
-        $user_name = $request->company;
+        $user_name = $request->first_name . '' . $request->last_name;
         $user_phone = $request->phone;
         $user_email = $validat_val['email'];
         $user_password = Hash::make($validat_val['password']);
