@@ -132,7 +132,7 @@
                             <div class="col-sm-6">
                                 <input id="bank-code" type="text"
                                     class="form-group-input form-control @error('bank-code') is-invalid @enderror"
-                                    name="bank-code" value="{{ old('bank-code') }}" placeholder="{{ __('Code') }}"
+                                    name="bank-code" value="{{ old('bank-code') }}" placeholder="{{ __('Bank Code') }}"
                                     required autocomplete="bank-code">
 
                             </div>
