@@ -4,7 +4,11 @@
 @endsection
 @section('content')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="{{assests('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{assests('css/slider-ghn.css')}}">
+
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <main role="main">
 
         <!-- Set up your HTML -->
@@ -42,6 +46,53 @@
         @endif
         <!-- End Hero Slider -->
 
+
+        <!-- Image Slider Start -->
+          <section class="cards-wrapper">
+            <div class="card-grid-space">
+              <div class="num">01</div>
+              <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://mgretailer.com/wp-content/uploads/2019/02/Sativa_Skincare_CBD_Today.jpg)">
+                <div>
+                  <h1>Types of Skins & Tips</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="date">6 Jan 2023</div>
+                  <div class="tags">
+                    <div class="tag">Details</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid-space">
+              <div class="num">02</div>
+              <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://tse2.mm.bing.net/th?id=OIP.c_ELygL_QZ8IsR9q0m0fMgHaEK&pid=Api&P=0')">
+                <div>
+                  <h1>Types of Skins & Tips</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="date">9 Jan 2023</div>
+                  <div class="tags">
+                    <div class="tag">Details</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid-space">
+              <div class="num">03</div>
+              <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://i.pinimg.com/originals/db/6d/f8/db6df80a5e0cf93b309854c51f2f1884.jpg')">
+                <div>
+                  <h1>Types of Skins & Tips</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="date">14 Jan 2023</div>
+                  <div class="tags">
+                    <div class="tag">Details</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+          </section>
+    </div>
+
+        <!-- Image Slider End -->
 
 
         <!-- miracle Expertise start -->
@@ -420,6 +471,77 @@
 
         <!-- Testimonial end -->
 
+        <!-- Earn with Miracle start-->
+        <div class="container-fluid" style="margin-top: 5px;">
+        <div class="row">
+
+            <div class="col-sm-7">
+                <section class="slider-wrapper">
+                    <div class="container"></div>
+                  <!-- Wrapper -->
+                  <section class="column-wrapper">
+                    <!-- Wrapper Inner -->
+                      <section class="column-wrapper-inner">
+                        <section class="slider-container">
+                      <div class="w3-content w3-display-container">
+                
+                        <!-- To add images to the slider, add them here. There are examples below. You will also need to enable another dot button below -->
+                
+                      <a href=""><img class="mySlides" src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main1.jpg"></a>
+                      <a href=""><img class="mySlides" src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main2.jpg"></a>
+                      <a href=""><img class="mySlides" src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main3.jpg"></a>
+                
+                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                
+                          <div class="arrow-wrapper">
+                            <div class="arrow">
+                          <div class="w3-left">&#10094;</div>
+                          <div class="w3-right">&#10095;</div>
+                        </div>
+                      </div> <!-- Close Arrow Wrapper -->
+                
+                      </div>
+                
+                      <div class="dots-wrapper">
+                        <div class="dots">
+                
+                    <!-- ADD THE NECESSARY DOTS TO MATCH YOUR IMAGES HERE -->
+                        <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(1)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(2)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(3)"></span>
+                      <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(4)"></span> -->
+                      <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(5)"></span> -->
+                
+                    </div>
+                  </div>
+                
+                    </section> <!-- Close Carousel -->
+                      <section class="sale-wrapper">
+                        <a href=""><img src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale1.jpg" alt="" class="sale"></a>
+                        <a href=""><img src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale2.jpg" alt="" class="sale"></a>
+                      </section>
+                    </section> <!-- Wrapper Inner -->
+                  </section> <!-- Column Wrapper -->
+                </section> <!-- Close Content Wrapper -->
+                
+                
+                      
+            </div>
+
+            <div class="col-sm-5" style="padding-top: 89px;">
+                <h4>Make Money With </h4>
+                <h2>MIRACLE BEAUTY</h2>
+                <br>
+                <p class="para-2" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                <button type="button" class="btn btn-outline-dark">REGISTER</button>
+                <button type="button" class="btn btn-outline-dark">READ MORE</button>
+            </div>
+
+        </div>
+    </div>
+        <!-- Earn with Miracle End-->
+
 
         <!-- miracle Blog start -->
         @if (count($Blog) > 0)
@@ -707,6 +829,16 @@
     </script>
 
 
+<script src="./js/index.js"></script>
+
+
+<script src="{{assests('js/index.js')}}"></script>
+<script type="text/javascript"  src=""></script> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -715,5 +847,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 @endsection
