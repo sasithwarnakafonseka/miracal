@@ -4,8 +4,8 @@
 @endsection
 @section('content')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="{{assests('css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{assests('css/slider-ghn.css')}}">
+    <link rel="stylesheet" type="text/css" href="css/style-lower.css">
+    <link rel="stylesheet" type="text/css" href="css/slider-ghn.css">
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -832,7 +832,7 @@
 <script src="./js/index.js"></script>
 
 
-<script src="{{assests('js/index.js')}}"></script>
+<script src="js/earn-carousel.js'"></script>
 <script type="text/javascript"  src=""></script> 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
