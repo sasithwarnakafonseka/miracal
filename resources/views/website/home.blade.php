@@ -51,14 +51,15 @@
 
         <!-- Image Slider Start -->
         <section class="cards-wrapper-gh">
+            
             <div class="card-grid-space-gh">
-                <div class="num-gh">01</div>
+                <!-- <div class="num-gh">01</div> -->
                 <a class="card-gh" href="https://codetheweb.blog/2017/10/06/html-syntax/"
                     style="--bg-img: url(https://mgretailer.com/wp-content/uploads/2019/02/Sativa_Skincare_CBD_Today.jpg)">
                     <div>
                         <h1>Types of Skins & Tips</h1>
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="date-gh">6 Jan 2023</div>
+                        <!-- <div class="date-gh">6 Jan 2023</div> -->
                         <div class="tags-gh">
                             <div class="tag-gh">Details</div>
                         </div>
@@ -66,13 +67,13 @@
                 </a>
             </div>
             <div class="card-grid-space-gh">
-                <div class="num-gh">02</div>
+                <!-- <div class="num-gh">02</div> -->
                 <a class="card-gh" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/"
                     style="--bg-img: url('https://tse2.mm.bing.net/th?id=OIP.c_ELygL_QZ8IsR9q0m0fMgHaEK&pid=Api&P=0')">
                     <div>
                         <h1>Types of Skins & Tips</h1>
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="date-gh">9 Jan 2023</div>
+                        <!-- <div class="date-gh">9 Jan 2023</div> -->
                         <div class="tags-gh">
                             <div class="tag-gh">Details</div>
                         </div>
@@ -80,13 +81,13 @@
                 </a>
             </div>
             <div class="card-grid-space-gh">
-                <div class="num-gh">03</div>
+                <!-- <div class="num-gh">03</div> -->
                 <a class="card-gh" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/"
                     style="--bg-img: url('https://i.pinimg.com/originals/db/6d/f8/db6df80a5e0cf93b309854c51f2f1884.jpg')">
                     <div>
                         <h1>Types of Skins & Tips</h1>
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="date-gh">14 Jan 2023</div>
+                        <!-- <div class="date-gh">14 Jan 2023</div> -->
                         <div class="tags-gh">
                             <div class="tag-gh">Details</div>
                         </div>
