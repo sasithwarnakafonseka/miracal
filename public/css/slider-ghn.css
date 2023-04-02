@@ -7,18 +7,19 @@ a .card-gh {
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4rem;
-    padding: 4rem;
-    margin: 0 auto;
-    width: max-content;
-    margin-top: 180px;
+    grid-gap: 2rem;
+    /* padding: 4rem; */
+    /* margin: 0 auto; */
+    /* width: max-content; */
+    /* margin-top: 180px; */
+    margin-bottom: 60px;
   }
   
   .card-gh {
     font-family: 'Heebo';
     --bg-filter-opacity: 0.5;
     background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-    height: 20em;
+    height: 15em;
     width: 15em;
     font-size: 1.5em;
     color: white;
@@ -43,8 +44,9 @@ a .card-gh {
   
   .card-gh h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: 1.2em;
+    text-align: left;
   }
   
   .card-gh p {
