@@ -4,7 +4,13 @@
 @endsection
 @section('content')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style-lower.css">
+    <link rel="stylesheet" type="text/css" href="css/slider-ghn.css">
+
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <main role="main">
 
         <!-- Set up your HTML -->
@@ -42,6 +48,77 @@
         @endif
         <!-- End Hero Slider -->
 
+
+        <!-- Image Slider Start -->
+
+
+
+        <section class="newArrivals section">
+            <div class="container">
+                <div class="row best-sellers-slider" style="margin-left: 0px; margin-right: 0px">
+                    <div class="col-md-12 text-center section-heading">
+                        <h1><strong class="strong-hm-sc-title">NEW &nbsp;</strong>ARRIVALS</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur eu cum aliquam
+                            diam cras aenean et. Pharetra, dignissim velitLorem ipsum dolor sit amet, </p>
+                    </div>
+                </div>
+
+
+                <div class="cards-wrapper-gh">
+
+                    @foreach ($latestProducts as $latestProduct)
+                        @php
+                            $UrlNmae = str_replace('/', '-', $latestProduct->name);
+                        @endphp
+                        <div class="card-grid-space-gh">
+                            <!-- <div class="num-gh">01</div> -->
+                            <a class="card-gh" href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}"
+                                style="--bg-img: url(/storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}">
+                                <div>
+                                    <h1>{{ $latestProduct->name }}</h1>
+                                    {{-- <p>Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <!-- <div class="date-gh">6 Jan 2023</div> -->
+                                    {{-- <div class="tags-gh">
+                                        <a href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}">
+                                            <div class="tag-gh">Details</div>
+                                        </a>
+                                    </div> --}}
+                                </div>
+                            </a>
+                        </div>
+                        {{-- <div class="card-grid-space-gh">
+                            <!-- <div class="num-gh">01</div> -->
+
+                            <a class="card-gh"
+                                @if ($latestProduct->Image_Product_thumbnail_image_best_seller != null) src="/storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}"
+                        @else
+                         src="\static\Image-2-1.jpg" @endif
+                                style="--bg-img: url(
+                        @if ($latestProduct->Image_Product_thumbnail_image_best_seller != null) /storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}
+                        @else
+                        "\static\Image-2-1.jpg" @endif
+                            )">
+                                <div>
+                                    <h1>{{ $latestProduct->name }}</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                    <!-- <div class="date-gh">6 Jan 2023</div> -->
+                                    <div class="tags-gh">
+                                        <div class="tag-gh"> <a
+                                                href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}"><button
+                                                    class="btn best-sellers-btn" type="button">Buy Now</button> </a></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> --}}
+                    @endforeach
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Image Slider End -->
 
 
         <!-- miracle Expertise start -->
@@ -87,7 +164,8 @@
                             <div class="item">
                                 <div class="row new-collection-section" style="margin-left: 250px; margin-right: 250px">
                                     <div class="col-lg-4 new-collection-section-row"><img
-                                            class="img-pre-order-new-collection" src="/storage/{{ $OfferBannerItem->img }}">
+                                            class="img-pre-order-new-collection"
+                                            src="/storage/{{ $OfferBannerItem->img }}">
                                     </div>
                                     <div class="col-lg-8 new-collection">
                                         <h2>PRE ORDER NEW COLLECTION</h2>
@@ -420,6 +498,92 @@
 
         <!-- Testimonial end -->
 
+        <!-- Earn with Miracle start-->
+        <div class="container-fluid container-fluid-gh" style="margin-top: 5px;">
+            <div class="row">
+
+                <div class="col-sm-7">
+                    <section class="slider-wrapper slider-wrapper-gh">
+                        <div class="container container-gh"></div>
+                        <!-- Wrapper -->
+                        <section class="column-wrapper column-wrapper-gh">
+                            <!-- Wrapper Inner -->
+                            <section class="column-wrapper-inner column-wrapper-inner-gh">
+                                <section class="slider-container slider-container-gh">
+                                    <div class="w3-content w3-display-container w3-content-gh w3-display-container-gh">
+
+                                        <!-- To add images to the slider, add them here. There are examples below. You will also need to enable another dot button below -->
+
+                                        <a href=""><img class="mySlides mySlides-gh"
+                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main1.jpg"></a>
+                                        {{-- <a href=""><img class="mySlides mySlides-gh"
+                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main2.jpg"></a> --}}
+                                        {{-- <a href=""><img class="mySlides mySlides-gh"
+                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main3.jpg"></a> --}}
+
+                                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle w3-center-gh w3-section-gh w3-large-gh w3-text-white-gh w3-display-bottommiddle-gh"
+                                            style="width:100%">
+
+                                            <div class="arrow-wrapper arrow-wrapper-gh">
+                                                <div class="arrow arrow-gh">
+                                                    <div class="w3-left w3-left-gh">&#10094;</div>
+                                                    <div class="w3-right w3-right-gh">&#10095;</div>
+                                                </div>
+                                            </div> <!-- Close Arrow Wrapper -->
+
+                                        </div>
+
+                                        <div class="dots-wrapper dots-wrapper-gh">
+                                            <div class="dots dots-gh">
+
+                                                <!-- ADD THE NECESSARY DOTS TO MATCH YOUR IMAGES HERE -->
+                                                <span
+                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
+                                                    onclick="currentDiv(1)"></span>
+                                                <span
+                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
+                                                    onclick="currentDiv(2)"></span>
+                                                <span
+                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
+                                                    onclick="currentDiv(3)"></span>
+                                                <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(4)"></span> -->
+                                                <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(5)"></span> -->
+
+                                            </div>
+                                        </div>
+
+                                </section> <!-- Close Carousel -->
+                                <section class="sale-wrapper sale-wrapper-gh">
+                                    <a href=""><img
+                                            src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale1.jpg"
+                                            alt="" class="sale sale-gh"></a>
+                                    <a href=""><img
+                                            src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale2.jpg"
+                                            alt="" class="sale sale-gh"></a>
+                                </section>
+                            </section> <!-- Wrapper Inner -->
+                        </section> <!-- Column Wrapper -->
+                    </section> <!-- Close Content Wrapper -->
+
+
+
+                </div>
+
+                <div class="col-sm-5" style="padding-top: 89px;">
+                    <h4>Make Money With </h4>
+                    <h2>MIRACLE BEAUTY</h2>
+                    <br>
+                    <p class="para-2-gh" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.</p>
+
+                    <button type="button" class="btn btn-outline-dark">REGISTER</button>
+                    <button type="button" class="btn btn-outline-dark">READ MORE</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- Earn with Miracle End-->
+
 
         <!-- miracle Blog start -->
         @if (count($Blog) > 0)
@@ -707,6 +871,20 @@
     </script>
 
 
+    <script src="./js/index.js"></script>
+    <script src="js/earn-carousel.js'"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -715,5 +893,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
 
 @endsection

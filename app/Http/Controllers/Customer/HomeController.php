@@ -57,7 +57,9 @@ class HomeController extends Controller
         $News_Events = Post::where('type', 2)->orderBy('updated_at', 'desc')->limit(3)->get();
         $Blog = Post::where('type', 1)->orderBy('updated_at', 'desc')->limit(3)->get();
         $bestSell = Products::where('best_sellers', 1)->limit(10)->get();
-        $latestProducts = Products::latest()->take(5)->get();
+        $latestProducts = Products::latest()->limit(3)->get();
+
+        // dd($latestProducts);
 
         $PRESENTS = array(
             'SKINCARE' => Products::where('best_sellers', 1)->limit(10)->get(),
@@ -70,7 +72,7 @@ class HomeController extends Controller
 
 
         // return view('website.coming_soon');
-        return view('website.home', ['PRESENTS' => $PRESENTS, 'Testimonios' => $Testimonios, 'MainBanneritemSub' => $MainBanneritemSub, 'Blog' => $Blog, 'News_Events' => $News_Events, 'MainBanners' => $MainBanners, 'OfferBanners' => $OfferBanners, 'partners' => $partners, 'bestSell' => $bestSell]);
+        return view('website.home', ['PRESENTS' => $PRESENTS, 'Testimonios' => $Testimonios, 'MainBanneritemSub' => $MainBanneritemSub, 'Blog' => $Blog, 'News_Events' => $News_Events, 'MainBanners' => $MainBanners, 'OfferBanners' => $OfferBanners, 'partners' => $partners, 'bestSell' => $bestSell, 'latestProducts' => $latestProducts]);
     }
 
     public function terms_policy()
