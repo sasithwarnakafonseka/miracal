@@ -543,6 +543,18 @@
                     </div>
 
                 </div>
+
+                <div class="col-sm-5" style="padding-top: 89px;">
+                    <h4>Make Money With </h4>
+                    <h2>MIRACLE BEAUTY</h2>
+                    <br>
+                    <p class="para-2-gh" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.</p>
+
+                    <a href="/login-register"><button type="button" class="btn btn-outline-dark">REGISTER</button></a>
+                    <a href="/about"><button type="button" class="btn btn-outline-dark">READ MORE</button></a>
+                </div>
+
             </div>
             <!-- Earn with Miracle End-->
         </section>
