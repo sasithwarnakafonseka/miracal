@@ -576,8 +576,8 @@
                     <p class="para-2-gh" style="font-size: large;">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.</p>
 
-                    <button type="button" class="btn btn-outline-dark">REGISTER</button>
-                    <button type="button" class="btn btn-outline-dark">READ MORE</button>
+                    <a href="/login-register"><button type="button" class="btn btn-outline-dark">REGISTER</button></a>
+                    <a href="/about"><button type="button" class="btn btn-outline-dark">READ MORE</button></a>
                 </div>
 
             </div>
