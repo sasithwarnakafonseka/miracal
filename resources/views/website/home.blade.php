@@ -79,51 +79,71 @@
 
 
         <!-- Image Slider Start -->
-        <section class="cards-wrapper-gh">
-            
-            <div class="card-grid-space-gh">
-                <!-- <div class="num-gh">01</div> -->
-                <a class="card-gh" href="https://codetheweb.blog/2017/10/06/html-syntax/"
-                    style="--bg-img: url(https://mgretailer.com/wp-content/uploads/2019/02/Sativa_Skincare_CBD_Today.jpg)">
-                    <div>
-                        <h1>Types of Skins & Tips</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <!-- <div class="date-gh">6 Jan 2023</div> -->
-                        <div class="tags-gh">
-                            <div class="tag-gh">Details</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="card-grid-space-gh">
-                <!-- <div class="num-gh">02</div> -->
-                <a class="card-gh" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/"
-                    style="--bg-img: url('https://tse2.mm.bing.net/th?id=OIP.c_ELygL_QZ8IsR9q0m0fMgHaEK&pid=Api&P=0')">
-                    <div>
-                        <h1>Types of Skins & Tips</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <!-- <div class="date-gh">9 Jan 2023</div> -->
-                        <div class="tags-gh">
-                            <div class="tag-gh">Details</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="card-grid-space-gh">
-                <!-- <div class="num-gh">03</div> -->
-                <a class="card-gh" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/"
-                    style="--bg-img: url('https://i.pinimg.com/originals/db/6d/f8/db6df80a5e0cf93b309854c51f2f1884.jpg')">
-                    <div>
-                        <h1>Types of Skins & Tips</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                        <!-- <div class="date-gh">14 Jan 2023</div> -->
-                        <div class="tags-gh">
-                            <div class="tag-gh">Details</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
+
+
+        <section class="newArrivals section">
+            <div class="container">
+                <div class="row best-sellers-slider" style="margin-left: 0px; margin-right: 0px">
+                    <div class="col-md-12 text-center section-heading">
+                        <h1><strong class="strong-hm-sc-title">NEW &nbsp;</strong>ARRIVALS</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur eu cum aliquam
+                            diam cras aenean et. Pharetra, dignissim velitLorem ipsum dolor sit amet, </p>
+                    </div>
+                </div>
+
+
+                <div class="cards-wrapper-gh">
+
+                    @foreach ($latestProducts as $latestProduct)
+                        @php
+                            $UrlNmae = str_replace('/', '-', $latestProduct->name);
+                        @endphp
+                        <div class="card-grid-space-gh">
+                            <!-- <div class="num-gh">01</div> -->
+                            <a class="card-gh" href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}"
+                                style="--bg-img: url(/storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}">
+                                <div>
+                                    <h1>{{ $latestProduct->name }}</h1>
+                                    {{-- <p>Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <!-- <div class="date-gh">6 Jan 2023</div> -->
+                                    {{-- <div class="tags-gh">
+                                        <a href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}">
+                                            <div class="tag-gh">Details</div>
+                                        </a>
+                                    </div> --}}
+                                </div>
+                            </a>
+                        </div>
+                        {{-- <div class="card-grid-space-gh">
+                            <!-- <div class="num-gh">01</div> -->
+
+                            <a class="card-gh"
+                                @if ($latestProduct->Image_Product_thumbnail_image_best_seller != null) src="/storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}"
+                        @else
+                         src="\static\Image-2-1.jpg" @endif
+                                style="--bg-img: url(
+                        @if ($latestProduct->Image_Product_thumbnail_image_best_seller != null) /storage/{{ $latestProduct->Image_Product_thumbnail_image_best_seller }}
+                        @else
+                        "\static\Image-2-1.jpg" @endif
+                            )">
+                                <div>
+                                    <h1>{{ $latestProduct->name }}</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                    <!-- <div class="date-gh">6 Jan 2023</div> -->
+                                    <div class="tags-gh">
+                                        <div class="tag-gh"> <a
+                                                href="/shop/product/{{ $latestProduct->id }}/{{ $UrlNmae }}"><button
+                                                    class="btn best-sellers-btn" type="button">Buy Now</button> </a></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> --}}
+                    @endforeach
+
+                </div>
+
+            </div>
         </section>
 
 
@@ -144,7 +164,8 @@
                             <div class="item">
                                 <div class="row new-collection-section" style="margin-left: 250px; margin-right: 250px">
                                     <div class="col-lg-4 new-collection-section-row"><img
-                                            class="img-pre-order-new-collection" src="/storage/{{ $OfferBannerItem->img }}">
+                                            class="img-pre-order-new-collection"
+                                            src="/storage/{{ $OfferBannerItem->img }}">
                                     </div>
                                     <div class="col-lg-8 new-collection">
                                         <h2>PRE ORDER NEW COLLECTION</h2>
