@@ -48,6 +48,35 @@
         @endif
         <!-- End Hero Slider -->
 
+        <!-- Image Slider End -->
+
+
+        <!-- miracle Expertise start -->
+        <section class="newArrivals section">
+            <div class="miracle-expertise">
+                <div class="index-content">
+                    <div class="row" style="margin-left: 0px; margin-right: 0px">
+                        <div class="col-md-4">
+                            <div class="card card-miracle-expertise">
+                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card3.png">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-miracle-expertise">
+                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card2.png">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-miracle-expertise">
+                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- miracle Expertise end -->
+
 
         <!-- Image Slider Start -->
         <section class="cards-wrapper-gh">
@@ -97,35 +126,6 @@
 
         </section>
 
-
-        <!-- Image Slider End -->
-
-
-        <!-- miracle Expertise start -->
-        <section class="newArrivals section">
-            <div class="miracle-expertise">
-                <div class="index-content">
-                    <div class="row" style="margin-left: 0px; margin-right: 0px">
-                        <div class="col-md-4">
-                            <div class="card card-miracle-expertise">
-                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card3.png">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-miracle-expertise">
-                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card2.png">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-miracle-expertise">
-                                <img class="index-content-card-img" src="\global_assets\images\card-banners\card1.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- miracle Expertise end -->
 
         <!-- PRE ORDER NEW COLLECTION start -->
         @if (count($OfferBanners) > 0)
@@ -191,6 +191,9 @@
                                     @endif
 
                                     <h6 class="img-miracle-bestseller-text">{{ $bestSellitem->name }}</h6>
+
+                                    <h6 class="img-miracle-bestseller-price">{{ $bestSellitem->name }}</h6>
+
                                     <div class="row">
                                         <div class="col-6">
                                             <a href="/shop/product/{{ $bestSellitem->id }}/{{ $UrlNmae }}"><button
@@ -198,9 +201,7 @@
                                         </div>
                                         <div class="col-6">
                                             <a id="order_link" href="/add-to-cart?id={{ $bestSellitem->id }}&quantity=1">
-                                                <button class="btn best-sellers-btn" type="button"><i
-                                                        class="product-card-cart fa fa-shopping-cart "
-                                                        aria-hidden="true"></i></button></a>
+                                                <button class="btn best-sellers-btn-cart" type="button">Add To Cart</button></a>
                                         </div>
                                     </div>
 
@@ -219,8 +220,8 @@
             <div class="container">
                 <div class="content-welcome">
                     <h2>WELCOME TO</h2>
-                    <h1>MIRACLE BEAUTY FAMILY</h1>
-                    <p>Miracle Beauty is a multi-level marketing beauty and health company selling directly to consumers
+                    <h1 class="heading-MR">MIRACLE BEAUTY FAMILY</h1>
+                    <p class="text-MR">Miracle Beauty is a multi-level marketing beauty and health company selling directly to consumers
                         founded
                         in 2022 and registered under ayurvedic department of Sri Lanka as an ayurvedic products
                         manufacturing
@@ -231,7 +232,7 @@
         </section>
         <!-- Wellcome end -->
 
-        <!-- Wellcome start -->
+        <!-- Miracle presents start -->
         @if (count($PRESENTS['SKINCARE']) > 0 || count($PRESENTS['HAIRCARE']) > 0 || count($PRESENTS['PHARMACEUTICAL']) > 0)
             <section class="presents-sec section">
                 <div class="row" style="margin-left: 0px; margin-right: 0px">
@@ -386,7 +387,7 @@
         <!-- Wellcome end -->
 
         <!-- miracle NEWS & Events start -->
-        @if (count($News_Events) > 0)
+        <!-- @if (count($News_Events) > 0)
             <section class="details-card">
                 <div class="row miracle-news-events" style="margin-left: 0px; margin-right: 0px">
                     <div class="col-md-12 text-center section-heading">
@@ -413,11 +414,11 @@
                 <a href="/news-event"><button class="btn btn-primary btn-card-news-events" type="button">Discover
                         More</button></a>
             </section>
-        @endif
+        @endif -->
         <!-- miracle NEWS & Events end -->
 
         <!-- Testimonial start -->
-        @if (count($Testimonios) > 0)
+        <!-- @if (count($Testimonios) > 0)
             <section>
                 <div class="container-fluid px-3 px-sm-5 my-5 text-center"
                     style="background-image:url(/static/TESTIMOnnnnnnn.jpg); max-width:initial; background-repeat: no-repeat; background-size: cover;">
@@ -472,7 +473,7 @@
                     </div>
                 </div>
             </section>
-        @endif
+        @endif -->
 
 
         <!-- Testimonial end -->
