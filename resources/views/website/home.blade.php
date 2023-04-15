@@ -300,17 +300,15 @@
                                                                 <img src="\static\Image-2-1.jpg" />
                                                             @endif
 
-                                                            <h6 class="img-miracle-bestseller-text">
-                                                                {{ $item->name }}</h6>
+                                                            <h6 class="img-miracle-bestseller-text">{{ $item->name }}</h6>
+                                                            <h6 class="img-miracle-bestseller-text">{{ $item->name }}</h6>
                                                             <div class="row">
                                                                 <div class="col-6">
                                                                     <button class="btn best-sellers-btn"
                                                                         type="button">Buy Now</button>
                                                                 </div>
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn" type="button"><i
-                                                                            class="product-card-cart fa fa-shopping-cart "
-                                                                            aria-hidden="true"></i></button>
+                                                                    <button class="btn best-sellers-btn" type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
 
@@ -341,15 +339,17 @@
 
                                                             <h6 class="img-miracle-bestseller-text">
                                                                 {{ $item->name }}</h6>
+
+                                                            <h6 class="img-miracle-bestseller-price">
+                                                                {{ $item->name }}</h6>
+
                                                             <div class="row">
                                                                 <div class="col-6">
                                                                     <button class="btn best-sellers-btn"
                                                                         type="button">Buy Now</button>
                                                                 </div>
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn" type="button"><i
-                                                                            class="product-card-cart fa fa-shopping-cart "
-                                                                            aria-hidden="true"></i></button>
+                                                                    <button class="btn best-sellers-btn" type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
 
@@ -378,17 +378,15 @@
                                                                 <img src="\static\Image-2-1.jpg" />
                                                             @endif
 
-                                                            <h6 class="img-miracle-bestseller-text">
-                                                                {{ $item->name }}</h6>
+                                                            <h6 class="img-miracle-bestseller-text">{{ $item->name }}</h6>
+                                                            <h6 class="img-miracle-bestseller-price">{{ $item->name }}</h6>
                                                             <div class="row">
                                                                 <div class="col-6">
                                                                     <button class="btn best-sellers-btn"
                                                                         type="button">Buy Now</button>
                                                                 </div>
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn" type="button"><i
-                                                                            class="product-card-cart fa fa-shopping-cart "
-                                                                            aria-hidden="true"></i></button>
+                                                                    <button class="btn best-sellers-btn" type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -504,70 +502,30 @@
             <div class="row">
 
                 <div class="col-sm-7">
-                    <section class="slider-wrapper slider-wrapper-gh">
-                        <div class="container container-gh"></div>
-                        <!-- Wrapper -->
-                        <section class="column-wrapper column-wrapper-gh">
-                            <!-- Wrapper Inner -->
-                            <section class="column-wrapper-inner column-wrapper-inner-gh">
-                                <section class="slider-container slider-container-gh">
-                                    <div class="w3-content w3-display-container w3-content-gh w3-display-container-gh">
-
-                                        <!-- To add images to the slider, add them here. There are examples below. You will also need to enable another dot button below -->
-
-                                        <a href=""><img class="mySlides mySlides-gh"
-                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main1.jpg"></a>
-                                        {{-- <a href=""><img class="mySlides mySlides-gh"
-                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main2.jpg"></a> --}}
-                                        {{-- <a href=""><img class="mySlides mySlides-gh"
-                                                src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/main3.jpg"></a> --}}
-
-                                        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle w3-center-gh w3-section-gh w3-large-gh w3-text-white-gh w3-display-bottommiddle-gh"
-                                            style="width:100%">
-
-                                            <div class="arrow-wrapper arrow-wrapper-gh">
-                                                <div class="arrow arrow-gh">
-                                                    <div class="w3-left w3-left-gh">&#10094;</div>
-                                                    <div class="w3-right w3-right-gh">&#10095;</div>
-                                                </div>
-                                            </div> <!-- Close Arrow Wrapper -->
-
-                                        </div>
-
-                                        <div class="dots-wrapper dots-wrapper-gh">
-                                            <div class="dots dots-gh">
-
-                                                <!-- ADD THE NECESSARY DOTS TO MATCH YOUR IMAGES HERE -->
-                                                <span
-                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
-                                                    onclick="currentDiv(1)"></span>
-                                                <span
-                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
-                                                    onclick="currentDiv(2)"></span>
-                                                <span
-                                                    class="w3-badge w3-badge-gh demo demo-gh  w3-border w3-border-gh w3-transparent w3-transparent-gh"
-                                                    onclick="currentDiv(3)"></span>
-                                                <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(4)"></span> -->
-                                                <!-- <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(5)"></span> -->
-
-                                            </div>
-                                        </div>
-
-                                </section> <!-- Close Carousel -->
-                                <section class="sale-wrapper sale-wrapper-gh">
-                                    <a href=""><img
-                                            src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale1.jpg"
-                                            alt="" class="sale sale-gh"></a>
-                                    <a href=""><img
-                                            src="https://store-v9chjhofug.mybigcommerce.com/product_images/import/carousel/sale2.jpg"
-                                            alt="" class="sale sale-gh"></a>
-                                </section>
-                            </section> <!-- Wrapper Inner -->
-                        </section> <!-- Column Wrapper -->
-                    </section> <!-- Close Content Wrapper -->
-
-
-
+                    <div class="carousel">
+                        <div class="carousel__container">
+                        <input type="radio" id="img-1" name="images" value="img-1" />
+                        <input type="radio" id="img-2" name="images" value="img-2" checked />
+                        <input type="radio" id="img-3" name="images" value="img-3" />
+                        <input type="radio" id="img-4" name="images" value="img-4" />
+                        <input type="radio" id="img-5" name="images" value="img-5" />
+                        <label class="carousel__img-container carousel__img-container--1" for="img-1" id="img-1">
+                            <img class="carousel__img" src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Colored room" />
+                        </label>
+                        <label class="carousel__img-container carousel__img-container--2" for="img-2" id="img-2">
+                            <img class="carousel__img" src="https://images.unsplash.com/photo-1485001564903-56e6a54d46ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Colored room" />
+                        </label>
+                        <label class="carousel__img-container carousel__img-container--3" for="img-3" id="img-3">
+                            <img class="carousel__img" src="https://images.unsplash.com/photo-1563089145-599997674d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="Colored room" />
+                        </label>
+                        <label class="carousel__img-container carousel__img-container--4" for="img-4" id="img-4">
+                            <img class="carousel__img" src="https://images.unsplash.com/photo-1680798790002-a974b97b0eeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80" alt="Colored room" />
+                        </label>
+                        <label class="carousel__img-container carousel__img-container--5" for="img-5" id="img-5">
+                            <img class="carousel__img" src="https://images.unsplash.com/photo-1680712738343-84ef33239b1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80" alt="Colored room" />
+                        </label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-sm-5" style="padding-top: 89px;">

@@ -10786,6 +10786,7 @@ button:focus {
     margin-right: 30px;
   }
   .tabbable-line > .nav-tabs > li > a {
+    font-size: 24px;
     border: 0;
     margin-right: 113px;
     color: #737373;
@@ -10812,6 +10813,7 @@ button:focus {
     position: relative;
   }
   .tabbable-line > .nav-tabs > li.active > a {
+    font-size: 24px;
     border: 0;
     color: #333333;
   }
@@ -10884,3 +10886,51 @@ button:focus {
 .product-card-cart{
     color: #006738 !important;
 }
+
+.carousel__container {
+    max-width: 50%;
+    margin: 6rem auto 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .carousel input[type=radio] {
+    display: none;
+  }
+  .carousel input[type=radio]#img-1:checked ~ .carousel__img-container#img-1,
+  .carousel input[type=radio]#img-2:checked ~ .carousel__img-container#img-2,
+  .carousel input[type=radio]#img-3:checked ~ .carousel__img-container#img-3 {
+    transform: translatex(0) scale(1.3);
+    opacity: 1;
+    z-index: 200;
+    box-shadow: 1px 3px 7px 2px rgba(0, 0, 0, 0.18);
+  }
+  .carousel input[type=radio]#img-2:checked ~ .carousel__img-container#img-1,
+  .carousel input[type=radio]#img-1:checked ~ .carousel__img-container#img-3,
+  .carousel input[type=radio]#img-3:checked ~ .carousel__img-container#img-2 {
+    transform: translateX(-60%);
+    z-index: 100;
+    opacity: 0.5;
+  }
+  .carousel input[type=radio]#img-2:checked ~ .carousel__img-container#img-3,
+  .carousel input[type=radio]#img-1:checked ~ .carousel__img-container#img-2,
+  .carousel input[type=radio]#img-3:checked ~ .carousel__img-container#img-1 {
+    transform: translateX(60%);
+    z-index: 100;
+    opacity: 0.5;
+  }
+  .carousel__img-container {
+    position: absolute;
+    width: 19rem;
+    height: 25rem;
+    top: 0px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+  }
+  .carousel__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+    height: 100%;
+  }
