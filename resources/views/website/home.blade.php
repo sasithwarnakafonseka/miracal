@@ -154,7 +154,7 @@
                     <div class="row best-sellers-slider" style="margin-left: 0px; margin-right: 0px">
                         <div class="col-md-12 text-center section-heading">
                             <h1><strong class="strong-hm-sc-title">NEW &nbsp;</strong>ARRIVALS</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur eu cum aliquam
+                            <p class="text-pre-order">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur eu cum aliquam
                                 diam cras aenean et. Pharetra, dignissim velitLorem ipsum dolor sit amet, </p>
                         </div>
                     </div>

@@ -2368,6 +2368,10 @@ border-radius: 0;
         text-align: center;
     }
 
+    .text-pre-order{
+        font-size: 20px;
+    }
+
     .miracle-news-events-card-img {
         position: relative;
         overflow: hidden;
