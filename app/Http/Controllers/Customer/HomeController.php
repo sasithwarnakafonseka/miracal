@@ -72,6 +72,7 @@ class HomeController extends Controller
 
 
         // return view('website.coming_soon');
+      
         return view('website.home', ['PRESENTS' => $PRESENTS, 'Testimonios' => $Testimonios, 'MainBanneritemSub' => $MainBanneritemSub, 'Blog' => $Blog, 'News_Events' => $News_Events, 'MainBanners' => $MainBanners, 'OfferBanners' => $OfferBanners, 'partners' => $partners, 'bestSell' => $bestSell, 'latestProducts' => $latestProducts]);
     }
 
