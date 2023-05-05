@@ -83,12 +83,14 @@
 
 
         @if (count($latestProducts) > 0)
-            <section class="newArrivals section">
+            <section class="newArrivals section" style="background: #F78FB3;padding-bottom: 80px;">
                 <div class="container">
                     <div class="row best-sellers-slider" style="margin-left: 0px; margin-right: 0px">
                         <div class="col-md-12 text-center section-heading">
-                            <h1><strong class="strong-hm-sc-title">NEW &nbsp;</strong>ARRIVALS</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur eu cum aliquam
+                            <h1 style="color:#fff"><strong style="color:#fff class="strong-hm-sc-title">NEW
+                                    &nbsp;</strong>ARRIVALS</h1>
+                            <p style="color:#fff">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                consectetur eu cum aliquam
                                 diam cras aenean et. Pharetra, dignissim velitLorem ipsum dolor sit amet, </p>
                         </div>
                     </div>
@@ -96,7 +98,8 @@
 
                     <div class="cards-wrapper-gh-ws">
 
-                        <div class="blog-slider">
+                        <div class="blog-slider"
+                            style="background-image: linear-gradient(147deg, #DC5480 0%, #8EA3E2 150%);">
                             <div class="blog-slider__wrp swiper-wrapper">
                                 @foreach ($latestProducts as $latestProduct)
                                     @php
@@ -201,17 +204,19 @@
                                     @endif
 
                                     <h6 class="img-miracle-bestseller-text">{{ $bestSellitem->name }}</h6>
-
+                                    <p class="img-miracle-bestseller-text">
+                                       LKR {{ $bestSellitem->g_regular_price }}</p>
 
 
                                     <div class="row">
                                         <div class="col-6">
                                             <a href="/shop/product/{{ $bestSellitem->id }}/{{ $UrlNmae }}"><button
-                                                    class="btn best-sellers-btn" type="button">Buy Now</button> </a>
+                                                    class="btn best-sellers-btn btn-outline" type="button">Buy Now</button>
+                                            </a>
                                         </div>
-                                        <div class="col-6 mr-0">
+                                        <div class="col-6 pl-0">
                                             <a id="order_link" href="/add-to-cart?id={{ $bestSellitem->id }}&quantity=1">
-                                                <button class="btn best-sellers-btn-cart" type="button">Add To
+                                                <button class="btn best-sellers-btn btn-outline-cart" type="button">Add To
                                                     Cart</button></a>
                                         </div>
                                     </div>
@@ -238,7 +243,7 @@
                         in 2022 and registered under ayurvedic department of Sri Lanka as an ayurvedic products
                         manufacturing
                         organization in 2020.</p>
-                    <div class="read-more"><a>READ MORE</a></div>
+                    <div class="read-more"><a><button class="btn btn-primary btn-miracle-blog"> READ MORE</button></a></div>
                 </div>
             </div>
         </section>
@@ -293,13 +298,15 @@
 
                                                             <h6 class="img-miracle-bestseller-text">{{ $item->name }}
                                                             </h6>
+                                                            <p class="img-miracle-bestseller-text">
+                                                                LKR {{ $item->g_regular_price }}</p>
                                                             <div class="row">
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Buy Now</button>
                                                                 </div>
-                                                                <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                <div class="col-6 pl-0">
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
@@ -332,14 +339,16 @@
                                                             <h6 class="img-miracle-bestseller-text">
                                                                 {{ $item->name }}</h6>
 
+                                                            <p class="img-miracle-bestseller-text">
+                                                               LKR {{ $item->g_regular_price }}</p>
 
                                                             <div class="row">
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Buy Now</button>
                                                                 </div>
-                                                                <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                <div class="col-6 pl-0">
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
@@ -371,13 +380,15 @@
 
                                                             <h6 class="img-miracle-bestseller-text">{{ $item->name }}
                                                             </h6>
+                                                            <p class="img-miracle-bestseller-text">
+                                                               LKR {{ $item->g_regular_price }}</p>
                                                             <div class="row">
                                                                 <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Buy Now</button>
                                                                 </div>
-                                                                <div class="col-6">
-                                                                    <button class="btn best-sellers-btn"
+                                                                <div class="col-6 pl-0">
+                                                                    <button class="btn best-sellers-btn btn-outline"
                                                                         type="button">Add To Cart</button>
                                                                 </div>
                                                             </div>
@@ -400,90 +411,90 @@
         <!-- miracle NEWS & Events start -->
         <!-- @if (count($News_Events) > 0)
     <section class="details-card">
-                                                                                                                                                                                                                                        <div class="row miracle-news-events" style="margin-left: 0px; margin-right: 0px">
-                                                                                                                                                                                                                                            <div class="col-md-12 text-center section-heading">
-                                                                                                                                                                                                                                                <h1><strong class="strong-hm-sc-title">miracle News</strong> & Events</h1>
-                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                        <div class="row miracle-news-events-align">
-                                                                                                                                                                                                                                            @foreach ($News_Events as $News_Eventsitem)
+                                                                                                                                                                                                                                                                                                                                                                <div class="row miracle-news-events" style="margin-left: 0px; margin-right: 0px">
+                                                                                                                                                                                                                                                                                                                                                                    <div class="col-md-12 text-center section-heading">
+                                                                                                                                                                                                                                                                                                                                                                        <h1><strong class="strong-hm-sc-title">miracle News</strong> & Events</h1>
+                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                <div class="row miracle-news-events-align">
+                                                                                                                                                                                                                                                                                                                                                                    @foreach ($News_Events as $News_Eventsitem)
     <div class="col-md-4 miracle-news-events-top-align">
-                                                                                                                                                                                                                                                    <div class="miracle-news-events-card-content">
-                                                                                                                                                                                                                                                        <div class="miracle-news-events-card-img">
-                                                                                                                                                                                                                                                            <img src="/storage/{{ $News_Eventsitem->img }}" alt="">
-                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                        <div class="miracle-news-events-card-desc">
-                                                                                                                                                                                                                                                            <h3>{{ $News_Eventsitem->title }}</h3>
-                                                                                                                                                                                                                                                            <p>{{ $News_Eventsitem->short_des }}</p> <a class="card-link"
-                                                                                                                                                                                                                                                                href="/news-event/single/{{ $News_Eventsitem->id }}">Read
-                                                                                                                                                                                                                                                                More....</a>
-                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                            <div class="miracle-news-events-card-content">
+                                                                                                                                                                                                                                                                                                                                                                                <div class="miracle-news-events-card-img">
+                                                                                                                                                                                                                                                                                                                                                                                    <img src="/storage/{{ $News_Eventsitem->img }}" alt="">
+                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                <div class="miracle-news-events-card-desc">
+                                                                                                                                                                                                                                                                                                                                                                                    <h3>{{ $News_Eventsitem->title }}</h3>
+                                                                                                                                                                                                                                                                                                                                                                                    <p>{{ $News_Eventsitem->short_des }}</p> <a class="card-link"
+                                                                                                                                                                                                                                                                                                                                                                                        href="/news-event/single/{{ $News_Eventsitem->id }}">Read
+                                                                                                                                                                                                                                                                                                                                                                                        More....</a>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                        </div>
     @endforeach
-                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                        <a href="/news-event"><button class="btn btn-primary btn-card-news-events" type="button">Discover
-                                                                                                                                                                                                                                                More</button></a>
-                                                                                                                                                                                                                                    </section>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                <a href="/news-event"><button class="btn btn-primary btn-card-news-events" type="button">Discover
+                                                                                                                                                                                                                                                                                                                                                                        More</button></a>
+                                                                                                                                                                                                                                                                                                                                                            </section>
     @endif -->
         <!-- miracle NEWS & Events end -->
 
         <!-- Testimonial start -->
         <!-- @if (count($Testimonios) > 0)
     <section>
-                                                                                                                                                                                                                                        <div class="container-fluid px-3 px-sm-5 my-5 text-center"
-                                                                                                                                                                                                                                            style="background-image:url(/static/TESTIMOnnnnnnn.jpg); max-width:initial; background-repeat: no-repeat; background-size: cover;">
-                                                                                                                                                                                                                                            <div id="Testimonios" class="owl-carousel owl-theme testi-crsl-section">
-                                                                                                                                                                                                                                                @foreach ($Testimonios as $index => $Testimonios)
+                                                                                                                                                                                                                                                                                                                                                                <div class="container-fluid px-3 px-sm-5 my-5 text-center"
+                                                                                                                                                                                                                                                                                                                                                                    style="background-image:url(/static/TESTIMOnnnnnnn.jpg); max-width:initial; background-repeat: no-repeat; background-size: cover;">
+                                                                                                                                                                                                                                                                                                                                                                    <div id="Testimonios" class="owl-carousel owl-theme testi-crsl-section">
+                                                                                                                                                                                                                                                                                                                                                                        @foreach ($Testimonios as $index => $Testimonios)
     @if ($index == 0)
     <div class="item first prev">
-                                                                                                                                                                                                                                                            <div class="card border-0 py-3 px-4">
-                                                                                                                                                                                                                                                                <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
-                                                                                                                                                                                                                                                                        class="img-fluid profile-pic mb-4 mt-3"> </div>
-                                                                                                                                                                                                                                                                <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
-                                                                                                                                                                                                                                                                <h6 class="mb-3 font-weight-light">{{ $Testimonios->title }}</h6>
-                                                                                                                                                                                                                                                                <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
-                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    <div class="card border-0 py-3 px-4">
+                                                                                                                                                                                                                                                                                                                                                                                        <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
+                                                                                                                                                                                                                                                                                                                                                                                                class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-3 font-weight-light">{{ $Testimonios->title }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
     @endif
-                                                                                                                                                                                                                                                    @if ($index == 1)
+                                                                                                                                                                                                                                                                                                                                                                            @if ($index == 1)
     <div class="item show">
-                                                                                                                                                                                                                                                            <div class="card border-0 py-3 px-4">
-                                                                                                                                                                                                                                                                <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
-                                                                                                                                                                                                                                                                        class="img-fluid profile-pic mb-4 mt-3"> </div>
-                                                                                                                                                                                                                                                                <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
-                                                                                                                                                                                                                                                                <h6 class="mb-3  font-weight-light">{{ $Testimonios->title }}</h6>
-                                                                                                                                                                                                                                                                <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
-                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    <div class="card border-0 py-3 px-4">
+                                                                                                                                                                                                                                                                                                                                                                                        <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
+                                                                                                                                                                                                                                                                                                                                                                                                class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-3  font-weight-light">{{ $Testimonios->title }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
     @endif
-                                                                                                                                                                                                                                                    @if ($index == 2)
+                                                                                                                                                                                                                                                                                                                                                                            @if ($index == 2)
     <div class="item next">
-                                                                                                                                                                                                                                                            <div class="card border-0 py-3 px-4">
-                                                                                                                                                                                                                                                                <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
-                                                                                                                                                                                                                                                                        class="img-fluid profile-pic mb-4 mt-3"> </div>
-                                                                                                                                                                                                                                                                <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
-                                                                                                                                                                                                                                                                <h6 class="mb-3 font-weight-light">{{ $Testimonios->title }}</h6>
-                                                                                                                                                                                                                                                                <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
-                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    <div class="card border-0 py-3 px-4">
+                                                                                                                                                                                                                                                                                                                                                                                        <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
+                                                                                                                                                                                                                                                                                                                                                                                                class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-3 font-weight-light">{{ $Testimonios->title }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
     @endif
-                                                                                                                                                                                                                                                    @if ($index == 3)
+                                                                                                                                                                                                                                                                                                                                                                            @if ($index == 3)
     <div class="item last">
-                                                                                                                                                                                                                                                            <div class="card border-0 py-3 px-4">
-                                                                                                                                                                                                                                                                <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
-                                                                                                                                                                                                                                                                        class="img-fluid profile-pic mb-4 mt-3"> </div>
-                                                                                                                                                                                                                                                                <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
-                                                                                                                                                                                                                                                                <h6 class="mb-3  font-weight-light">{{ $Testimonios->title }}</h6>
-                                                                                                                                                                                                                                                                <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
-                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    <div class="card border-0 py-3 px-4">
+                                                                                                                                                                                                                                                                                                                                                                                        <div class="row justify-content-center"> <img src="\static\testimonial.JPG"
+                                                                                                                                                                                                                                                                                                                                                                                                class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-1 mt-2">{{ $Testimonios->name }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <h6 class="mb-3  font-weight-light">{{ $Testimonios->title }}</h6>
+                                                                                                                                                                                                                                                                                                                                                                                        <p class="content mb-5 mx-2">{{ $Testimonios->testimonio }}</p>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
     @endif
     @endforeach
 
-                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                    </section>
+                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                            </section>
     @endif -->
 
 
