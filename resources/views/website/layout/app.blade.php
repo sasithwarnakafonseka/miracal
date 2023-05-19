@@ -80,7 +80,8 @@
     <div class="elfsight-app-2e73e14f-8c28-4155-9fd9-4cbf2fa38175"></div>
     <div class="container-fluid d-flex p-0 mx-auto flex-column">
         <header class="mb-auto">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation web-tab-navmenu-bar" id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation web-tab-navmenu-bar"
+                id="navbar">
                 <div class="container">
                     <a class="navbar-brand m-2 font-weight-bold" href="{{ route('/') }}"><img class="site-logo"
                             alt="Miracle" src="/global_assets/images/logo-menu.png"></a>
@@ -265,243 +266,40 @@
                             class="main-menu d-flex flex-column flex-lg-row align-items-lg-center list-unstyled p-0 m-0">
                             <li class="active">
                                 <a href="javascript:void(0)" class="d-block" title="Home">
-                                    <span>HOME</span>
+                                    <a href="{{ route('/') }}" class="nav-link">HOME</a>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('/about') }}" class="d-block" title="About">
-                                    <span>ABOUT US</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-block" title="miracle PORTFOLIO">
-                                    <span>miracle PORTFOLIO</span>
+                                <a href="#" class="nav-link dropdown-toggle" id="navbarLandings"
+                                    data-toggle="dropdown" href="#" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    SHOP
                                 </a>
                                 <ul class="sub-menu list-unstyled p-0 m-0">
                                     <li>
-                                        <a href="#" class="d-block" title=">Wine">
-                                            <span>Wine</span>
-                                        </a>
+                                        <a href="/shop?category=10"> <button class="tablinks" id="defaultOpen">Skin
+                                                Care</button></a>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-block" title="Bubbles">
-                                            <span>Bubbles</span>
-                                        </a>
+                                        <a href="/shop?category=11"><button class="tablinks"
+                                                onmouseover="openPortfolioTab(event, 'Hair-Care')">Hair
+                                                Care</button></a>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-block" title="Beers / Ciders / Mead">
-                                            <span>Beers / Ciders / Mead</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Liqueurs">
-                                            <span>Liqueurs</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Sake">
-                                            <span>Sake</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Non Alcoholic">
-                                            <span>Non Alcoholic</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Accessories">
-                                            <span>Accessories</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="d-block" title="BORDEAUX">
-                                    <span>BORDEAUX</span>
-                                </a>
-                                <ul class="sub-menu list-unstyled p-0 m-0">
-                                    <li>
-                                        <a href="#" class="d-block" title="Médoc">
-                                            <span>Médoc</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Haut-Médoc">
-                                            <span>Haut-Médoc</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Saint-Estèphe">
-                                            <span>Saint-Estèphe</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Pauillac">
-                                            <span>Pauillac</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Saint Julien">
-                                            <span>Saint Julien</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Listrac Médoc">
-                                            <span>Listrac Médoc</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Moulis">
-                                            <span>Moulis</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Margaux">
-                                            <span>Margaux</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Pessac Léognan">
-                                            <span>Pessac Léognan</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Graves">
-                                            <span>Graves</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Cérons">
-                                            <span>Cérons</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Barsac">
-                                            <span>Barsac</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Sautherns">
-                                            <span>Sautherns</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Bordeaux Sepérieur">
-                                            <span>Bordeaux Sepérieur</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Bordeaux AOC">
-                                            <span>Bordeaux AOC</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Entre-Deux-Mers">
-                                            <span>Entre-Deux-Mers</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Pomerol">
-                                            <span>Pomerol</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Lalande-de-Pomerol">
-                                            <span>Lalande-de-Pomerol</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Côtes de Castillon">
-                                            <span>Côtes de Castillon</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Saint Émilion">
-                                            <span>Saint Émilion</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="d-block" title="BURGUNDY">
-                                    <span>BURGUNDY</span>
-                                </a>
-                                <ul class="sub-menu list-unstyled p-0 m-0">
-                                    <li>
-                                        <a href="#" class="d-block" title="Chablis">
-                                            <span>Chablis</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Côte de Nuits">
-                                            <span>Côte de Nuits</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Côte de Beaune">
-                                            <span>Côte de Beaune</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Côte de Chalonnaise">
-                                            <span>Côte de Chalonnaise</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Mâconnaise">
-                                            <span>Mâconnaise</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="d-block" title="BUBBLES">
-                                    <span>BUBBLES</span>
-                                </a>
-                                <ul class="sub-menu list-unstyled p-0 m-0">
-                                    <li>
-                                        <a href="#" class="d-block" title="Champagnes">
-                                            <span>Champagnes</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Franciacorta">
-                                            <span>Franciacorta</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Prosecco">
-                                            <span>Prosecco</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Cava">
-                                            <span>Cava</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Crémant">
-                                            <span>Crémant</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Sekt">
-                                            <span>Sekt</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block" title="Other sparkling wines">
-                                            <span>Other sparkling wines </span>
-                                        </a>
+                                        <a href="/shop?category=12"><button class="tablinks"
+                                                onmouseover="openPortfolioTab(event, 'Pharmaceutical')">Pharmaceutical</button></a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a onclick="searchBox();" class="nav-link navbar-link-2 waves-effect">
-                                    <i class="fas fa-fw fa-search pl-0" style="font-size: 20px; color:#006738"></i>
-                                </a>
+                            <li>
+                                <a href="{{ route('/about') }}" class="nav-link">ABOUT US</a>
+
                             </li>
+                            <li>
+                                <a href="{{ route('help_faq') }}" class="nav-link">Help & Contact</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a href="/my-account" class="nav-link navbar-link-2 waves-effect"
                                     style="padding: 10px 10px; margin-top: 5px; margin-right:0px;">
