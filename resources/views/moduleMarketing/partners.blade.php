@@ -104,14 +104,9 @@
                                     <div class="form-group">
                                         <label>Offering</label>
                                        <select name="Offering[]" class="select2" id="Offering" multiple>
-                                        <option  value="Wines">Wines</option>
-                                        <option  value="Spirits">Spirits</option>
-                                        <option  value="Bubbles">Bubbles</option>
-                                        <option  value="Beer">Beer</option>
-                                        <option  value="Sake">Sake</option>
-                                        <option  value="Liqueurs">Liqueurs</option>
-                                        <option  value="Non-Alcoholic">Non-Alcoholic</option>
-                                        <option  value="miracle-Accessories">miracle Accessories</option>
+                                        <option  value="Skin Care">Skin Care</option>
+                                        <option  value="Hair Care">Hair Care</option>
+                                        <option  value="Pharmaceutical">Pharmaceutical</option>
                                        </select>
                                     </div>
 

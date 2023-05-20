@@ -1,5 +1,7 @@
 @extends('website.layout.app')
-@section('title') miracle Partners @endsection
+@section('title')
+    miracle Partners
+@endsection
 @section('content')
     <main role="main">
         <div class="container-fluid text-left our-partner-pg">
@@ -12,7 +14,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="our-partner-pg-text"><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    <p class="our-partner-pg-text"><br>Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
                         type and scrambled it to make a type specimen book. It has survived not only five centuries, but
                         also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
@@ -31,14 +34,9 @@
         <div class="container-fluid mb-5 our-partner-pg">
             <div class="filter filter-our-partners-pg">
                 <a class="all current" href="#">All</a>
-                <a class="Wines" href="#">Wines</a>
-                <a class="Spirits" href="#">Spirits</a>
-                <a class="Bubbles" href="#">Bubbles</a>
-                <a class="Beer" href="#">Beer</a>
-                <a class="Sake" href="#">Sake</a>
-                <a class="Liqueurs" href="#">Liqueurs</a>
-                <a class="Non-Alcoholic" href="#">Non-Alcoholic</a>
-                <a class="miracle-Accessories" href="#">miracle Accessories</a>
+                <a class="Skin-Care" href="#">Skin Care</a>
+                <a class="Hair-Care" href="#">Hair Care</a>
+                <a class="Pharmaceutical" href="#">Pharmaceutical</a>
             </div>
 
             <hr class="our-partner-pg-divider">
@@ -52,8 +50,10 @@
                                 ->where('id_partner', $partnerstem->id)
                                 ->get();
                         @endphp
-                        <div class="box @foreach ($cssClass as $cssClassItems) {{ $cssClassItems->name_offering }} @endforeach"><img
-                             width="125px" class="our-partner-pg-img"  src="/storage/{{ $partnerstem->logo }}" alt=""></div>
+                        <div
+                            class="box @foreach ($cssClass as $cssClassItems) {{ $cssClassItems->name_offering }} @endforeach">
+                            <img width="125px" class="our-partner-pg-img" src="/storage/{{ $partnerstem->logo }}"
+                                alt=""></div>
                     </a>
                 @endforeach
 
@@ -83,40 +83,40 @@
             });
 
 
-            $filter.on('click touch', '.Wines', function(e) {
+            $filter.on('click touch', '.Skin-Care', function(e) {
                 e.preventDefault();
                 $tab.removeClass('current');
                 $(this).addClass('current');
 
                 $offers.show();
                 $offers.fadeOut(400);
-                $offers.filter('.Wines').fadeIn(400);
+                $offers.filter('.Skin-Care').fadeIn(400);
 
             });
 
 
 
-            $filter.on('click touch', '.Spirits', function(e) {
+            $filter.on('click touch', '.Hair-Care', function(e) {
                 e.preventDefault();
                 $tab.removeClass('current');
                 $(this).addClass('current');
 
                 $offers.show();
                 $offers.fadeOut(400);
-                $offers.filter('.Spirits').fadeIn(400);
+                $offers.filter('.Hair-Care').fadeIn(400);
 
             });
 
 
 
-            $filter.on('click touch', '.Bubbles', function(e) {
+            $filter.on('click touch', '.Pharmaceutical', function(e) {
                 e.preventDefault();
                 $tab.removeClass('current');
                 $(this).addClass('current');
 
                 $offers.show();
                 $offers.fadeOut(400);
-                $offers.filter('.Bubbles').fadeIn(400);
+                $offers.filter('.Pharmaceutical').fadeIn(400);
 
             });
 
@@ -178,5 +178,4 @@
 
         });
     </script>
-
 @endsection
